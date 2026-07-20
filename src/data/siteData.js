@@ -38,13 +38,12 @@ export const company = {
 /* =========================================================
    BRAND ASSET PATHS
    ========================================================= */
-
 export const brandAssets = {
-  logo: "/images/logo.png",
-  logoSymbol: "/images/logo-symbol.png",
+  logo: "/images/rr-rootrise-full-logo.png",
+  logoSymbol: "/images/rr-rootrise-full-logo.png",
   heroVisual: "/images/hero-visual.webp",
   socialPreview: "/images/social-preview.jpg",
-  favicon: "/favicon.svg",
+  favicon: "/favicon.png",
 };
 
 /* =========================================================
