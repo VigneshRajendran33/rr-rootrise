@@ -1,0 +1,353 @@
+/* =========================================================
+   RR ROOTRISE DIGITAL INNOVATIONS
+   GLOBAL DESIGN TOKENS
+   ========================================================= */
+
+:root {
+  /* ---------------------------------------------------------
+     FONT FAMILIES
+     --------------------------------------------------------- */
+
+  --font-display:
+    "Manrope",
+    "Segoe UI",
+    Arial,
+    sans-serif;
+
+  --font-body:
+    "Inter",
+    "Segoe UI",
+    Arial,
+    sans-serif;
+
+  /* ---------------------------------------------------------
+     FONT WEIGHTS
+     --------------------------------------------------------- */
+
+  --font-regular: 400;
+  --font-medium: 500;
+  --font-semibold: 600;
+  --font-bold: 700;
+  --font-extrabold: 800;
+
+  /* ---------------------------------------------------------
+     FONT SIZES
+     Professional and clearly readable across all devices
+     --------------------------------------------------------- */
+
+  --text-xs: 0.875rem;
+  --text-sm: 0.9375rem;
+  --text-base: 1rem;
+  --text-md: 1.0625rem;
+  --text-lg: 1.125rem;
+  --text-xl: 1.25rem;
+  --text-2xl: 1.5rem;
+  --text-3xl: 1.875rem;
+  --text-4xl: 2.25rem;
+  --text-5xl: 3rem;
+  --text-6xl: 3.75rem;
+  --text-7xl: 4.5rem;
+
+  --heading-hero: clamp(2.65rem, 6vw, 5.4rem);
+  --heading-page: clamp(2.4rem, 5vw, 4.5rem);
+  --heading-section: clamp(2rem, 4vw, 3.5rem);
+  --heading-card: clamp(1.25rem, 2vw, 1.5rem);
+
+  --body-large: clamp(1.0625rem, 1.5vw, 1.25rem);
+  --body-default: clamp(1rem, 1.1vw, 1.125rem);
+  --body-small: 1rem;
+
+  /* ---------------------------------------------------------
+     LINE HEIGHTS
+     --------------------------------------------------------- */
+
+  --line-tight: 1.08;
+  --line-heading: 1.18;
+  --line-body: 1.7;
+  --line-relaxed: 1.85;
+
+  /* ---------------------------------------------------------
+     LETTER SPACING
+     --------------------------------------------------------- */
+
+  --tracking-tight: -0.04em;
+  --tracking-heading: -0.025em;
+  --tracking-normal: 0;
+  --tracking-wide: 0.08em;
+  --tracking-wider: 0.14em;
+
+  /* ---------------------------------------------------------
+     PRIMARY BRAND COLOURS
+     --------------------------------------------------------- */
+
+  --navy-950: #04111f;
+  --navy-900: #071827;
+  --navy-850: #0a1e30;
+  --navy-800: #0d2539;
+  --navy-700: #14334c;
+  --navy-600: #1d4562;
+
+  --emerald-700: #047857;
+  --emerald-600: #059669;
+  --emerald-500: #10b981;
+  --emerald-400: #34d399;
+  --emerald-300: #6ee7b7;
+
+  --cyan-700: #0e7490;
+  --cyan-600: #0891b2;
+  --cyan-500: #06b6d4;
+  --cyan-400: #22d3ee;
+  --cyan-300: #67e8f9;
+
+  /* ---------------------------------------------------------
+     NEUTRAL COLOURS
+     --------------------------------------------------------- */
+
+  --white: #ffffff;
+  --off-white: #f8fbfc;
+  --surface-soft: #f1f6f8;
+  --surface-muted: #e7eff3;
+
+  --slate-950: #0f172a;
+  --slate-900: #172033;
+  --slate-800: #263247;
+  --slate-700: #3c495d;
+  --slate-600: #536176;
+  --slate-500: #6b788b;
+  --slate-400: #8b97a8;
+  --slate-300: #b6c0cc;
+  --slate-200: #d9e0e7;
+  --slate-100: #edf1f5;
+
+  /* ---------------------------------------------------------
+     SEMANTIC COLOURS
+     --------------------------------------------------------- */
+
+  --color-primary: var(--emerald-500);
+  --color-primary-dark: var(--emerald-600);
+  --color-primary-light: var(--emerald-300);
+
+  --color-secondary: var(--cyan-500);
+  --color-secondary-dark: var(--cyan-600);
+  --color-secondary-light: var(--cyan-300);
+
+  --color-background: var(--white);
+  --color-background-soft: var(--off-white);
+  --color-background-muted: var(--surface-soft);
+  --color-background-dark: var(--navy-950);
+  --color-background-dark-alt: var(--navy-900);
+
+  --color-heading: var(--navy-950);
+  --color-text: var(--slate-700);
+  --color-text-soft: var(--slate-600);
+  --color-text-muted: var(--slate-500);
+
+  --color-heading-dark: var(--white);
+  --color-text-dark: #d4dee7;
+  --color-text-dark-muted: #aab8c5;
+
+  --color-border: rgba(15, 23, 42, 0.12);
+  --color-border-soft: rgba(15, 23, 42, 0.08);
+  --color-border-dark: rgba(255, 255, 255, 0.12);
+
+  --color-success: #0f9f6e;
+  --color-success-soft: #e7f8f1;
+
+  --color-error: #dc2626;
+  --color-error-soft: #fef2f2;
+
+  --color-warning: #d97706;
+  --color-warning-soft: #fff7ed;
+
+  /* ---------------------------------------------------------
+     GRADIENTS
+     --------------------------------------------------------- */
+
+  --gradient-brand:
+    linear-gradient(
+      135deg,
+      var(--emerald-400) 0%,
+      var(--emerald-500) 42%,
+      var(--cyan-500) 100%
+    );
+
+  --gradient-brand-hover:
+    linear-gradient(
+      135deg,
+      var(--emerald-300) 0%,
+      var(--emerald-500) 45%,
+      var(--cyan-400) 100%
+    );
+
+  --gradient-dark:
+    linear-gradient(
+      135deg,
+      var(--navy-950) 0%,
+      var(--navy-900) 48%,
+      var(--navy-800) 100%
+    );
+
+  --gradient-surface:
+    linear-gradient(
+      180deg,
+      var(--white) 0%,
+      var(--off-white) 100%
+    );
+
+  --gradient-soft:
+    linear-gradient(
+      135deg,
+      rgba(16, 185, 129, 0.08) 0%,
+      rgba(6, 182, 212, 0.08) 100%
+    );
+
+  --gradient-hero-glow:
+    radial-gradient(
+      circle,
+      rgba(16, 185, 129, 0.2) 0%,
+      rgba(6, 182, 212, 0.08) 42%,
+      transparent 72%
+    );
+
+  /* ---------------------------------------------------------
+     SHADOWS
+     --------------------------------------------------------- */
+
+  --shadow-xs:
+    0 1px 2px rgba(7, 24, 39, 0.06);
+
+  --shadow-sm:
+    0 6px 18px rgba(7, 24, 39, 0.08);
+
+  --shadow-md:
+    0 14px 34px rgba(7, 24, 39, 0.11);
+
+  --shadow-lg:
+    0 24px 60px rgba(7, 24, 39, 0.14);
+
+  --shadow-xl:
+    0 32px 90px rgba(7, 24, 39, 0.2);
+
+  --shadow-card:
+    0 18px 45px rgba(7, 24, 39, 0.09);
+
+  --shadow-card-hover:
+    0 28px 70px rgba(7, 24, 39, 0.15);
+
+  --shadow-button:
+    0 12px 28px rgba(16, 185, 129, 0.24);
+
+  --shadow-button-hover:
+    0 18px 38px rgba(16, 185, 129, 0.32);
+
+  --shadow-glow:
+    0 0 50px rgba(34, 211, 238, 0.15);
+
+  /* ---------------------------------------------------------
+     BORDER RADIUS
+     --------------------------------------------------------- */
+
+  --radius-xs: 0.375rem;
+  --radius-sm: 0.625rem;
+  --radius-md: 0.875rem;
+  --radius-lg: 1.25rem;
+  --radius-xl: 1.75rem;
+  --radius-2xl: 2.25rem;
+  --radius-pill: 999px;
+  --radius-circle: 50%;
+
+  /* ---------------------------------------------------------
+     SPACING SYSTEM
+     --------------------------------------------------------- */
+
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.25rem;
+  --space-6: 1.5rem;
+  --space-7: 1.75rem;
+  --space-8: 2rem;
+  --space-10: 2.5rem;
+  --space-12: 3rem;
+  --space-14: 3.5rem;
+  --space-16: 4rem;
+  --space-20: 5rem;
+  --space-24: 6rem;
+  --space-28: 7rem;
+  --space-32: 8rem;
+
+  --section-space: clamp(5rem, 9vw, 8.5rem);
+  --section-space-small: clamp(3.75rem, 7vw, 6rem);
+
+  /* ---------------------------------------------------------
+     CONTAINER WIDTHS
+     --------------------------------------------------------- */
+
+  --container-wide: 90rem;
+  --container-main: 80rem;
+  --container-content: 70rem;
+  --container-reading: 48rem;
+
+  --container-padding:
+    clamp(1.25rem, 4vw, 3.5rem);
+
+  /* ---------------------------------------------------------
+     COMPONENT HEIGHTS
+     --------------------------------------------------------- */
+
+  --header-height: 5.5rem;
+  --header-height-mobile: 4.75rem;
+
+  --button-height: 3.5rem;
+  --button-height-small: 3rem;
+
+  --input-height: 3.75rem;
+
+  /* ---------------------------------------------------------
+     TRANSITIONS
+     --------------------------------------------------------- */
+
+  --duration-fast: 160ms;
+  --duration-normal: 280ms;
+  --duration-slow: 500ms;
+  --duration-reveal: 700ms;
+
+  --ease-standard:
+    cubic-bezier(0.22, 1, 0.36, 1);
+
+  --ease-smooth:
+    cubic-bezier(0.4, 0, 0.2, 1);
+
+  --transition-fast:
+    var(--duration-fast) var(--ease-smooth);
+
+  --transition-normal:
+    var(--duration-normal) var(--ease-standard);
+
+  --transition-slow:
+    var(--duration-slow) var(--ease-standard);
+
+  /* ---------------------------------------------------------
+     LAYERS
+     --------------------------------------------------------- */
+
+  --z-base: 1;
+  --z-content: 10;
+  --z-header: 100;
+  --z-dropdown: 200;
+  --z-floating: 300;
+  --z-overlay: 400;
+  --z-modal: 500;
+  --z-toast: 600;
+
+  /* ---------------------------------------------------------
+     ACCESSIBILITY
+     --------------------------------------------------------- */
+
+  --focus-ring:
+    0 0 0 4px rgba(34, 211, 238, 0.25);
+
+  --focus-outline:
+    2px solid var(--cyan-400);
+}
