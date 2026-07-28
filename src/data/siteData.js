@@ -32,7 +32,7 @@ export const company = {
     "To become a trusted digital solutions partner for ambitious businesses across India and worldwide.",
 
   whatsappHref:
-    "https://wa.me/916383486668?text=Hello%20RR%20RootRise%2C%20I%20would%20like%20to%20discuss%20a%20project.",
+    "https://wa.me/917200334187?text=Hello%20RR%20RootRise%2C%20I%20would%20like%20to%20discuss%20a%20project.",
 };
 
 /* =========================================================
