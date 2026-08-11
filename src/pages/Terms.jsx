@@ -23,7 +23,7 @@ function Terms() {
         aria-labelledby="terms-title"
       >
         <div className="container-reading">
-          <article className="legal-content-card reveal">
+<article className="legal-content-card">      
             <div className="legal-content">
               <div>
                 <span className="legal-updated">
