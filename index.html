@@ -1,6 +1,33 @@
 <!doctype html>
 <html lang="en">
   <head>
+    <!-- =====================================================
+         GOOGLE ANALYTICS 4
+         Measurement ID: G-HLZW39BHHW
+         ===================================================== -->
+
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-HLZW39BHHW"
+    ></script>
+
+    <script>
+      window.dataLayer = window.dataLayer || [];
+
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+
+      gtag("js", new Date());
+
+      gtag("config", "G-HLZW39BHHW");
+    </script>
+
+    <!-- =====================================================
+         BASIC META
+         ===================================================== -->
+
     <meta charset="UTF-8" />
 
     <meta
@@ -14,7 +41,7 @@
 
     <meta
       name="description"
-      content="Professional websites, mobile applications, e-commerce platforms, custom web solutions, design and digital growth services for modern businesses."
+      content="RR RootRise Digital Innovations provides professional website development, mobile applications, e-commerce platforms, custom software, UI/UX design, SEO and digital growth solutions for businesses in India and worldwide."
     />
 
     <meta
@@ -29,22 +56,30 @@
 
     <meta
       name="theme-color"
-      content="#04111f"
+      content="#031522"
     />
 
     <meta
       name="color-scheme"
-      content="light"
+      content="dark light"
     />
+
+    <!-- =====================================================
+         CANONICAL
+         ===================================================== -->
 
     <link
       rel="canonical"
-      href="https://rrrootrise.netlify.app"
+      href="https://rrrootrise.com/"
     />
+
+    <!-- =====================================================
+         FAVICON / APP ICON
+         ===================================================== -->
 
     <link
       rel="icon"
-      type="image/svg+xml"
+      type="image/png"
       href="/favicon.png"
     />
 
@@ -52,6 +87,10 @@
       rel="apple-touch-icon"
       href="/images/logo-symbol.png"
     />
+
+    <!-- =====================================================
+         FONTS
+         ===================================================== -->
 
     <link
       rel="preconnect"
@@ -68,6 +107,11 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap"
       rel="stylesheet"
     />
+
+    <!-- =====================================================
+         OPEN GRAPH
+         LinkedIn / Facebook / WhatsApp
+         ===================================================== -->
 
     <meta
       property="og:type"
@@ -86,28 +130,32 @@
 
     <meta
       property="og:description"
-      content="Professional websites, mobile applications, e-commerce platforms, custom web solutions, design and digital growth services for modern businesses."
+      content="Professional websites, mobile applications, e-commerce platforms, custom software, UI/UX design, SEO and digital growth solutions for modern businesses."
     />
 
     <meta
       property="og:url"
-      content="https://rrrootrise.netlify.app"
+      content="https://rrrootrise.com/"
     />
 
     <meta
       property="og:image"
-      content="https://rrrootrise.netlify.app/images/social-preview.jpg"
+      content="https://rrrootrise.com/images/social-preview.jpg"
     />
 
     <meta
       property="og:image:alt"
-      content="RR RootRise Digital Innovations"
+      content="RR RootRise Digital Innovations - Strong Roots. Digital Growth."
     />
 
     <meta
       property="og:locale"
       content="en_IN"
     />
+
+    <!-- =====================================================
+         X / TWITTER
+         ===================================================== -->
 
     <meta
       name="twitter:card"
@@ -121,13 +169,47 @@
 
     <meta
       name="twitter:description"
-      content="Professional software and digital solutions built around real business goals."
+      content="Professional software and digital solutions designed around real business goals."
     />
 
     <meta
       name="twitter:image"
-      content="https://rrrootrise.netlify.app/images/social-preview.jpg"
+      content="https://rrrootrise.com/images/social-preview.jpg"
     />
+
+    <!-- =====================================================
+         STRUCTURED DATA
+         ===================================================== -->
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "RR RootRise Digital Innovations",
+        "url": "https://rrrootrise.com/",
+        "logo": "https://rrrootrise.com/images/logo-symbol.png",
+        "email": "info@rrrootrise.com",
+        "telephone": "+91-72003-34187",
+        "description": "Software and digital solutions company providing website development, mobile applications, e-commerce platforms, custom software, UI/UX design, SEO and digital growth services.",
+        "foundingDate": "2026",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "2, Kalapatti Main Rd, Periyar Nagar, Nehru Nagar West",
+          "addressLocality": "Coimbatore",
+          "addressRegion": "Tamil Nadu",
+          "postalCode": "641014",
+          "addressCountry": "IN"
+        },
+        "sameAs": [
+          "https://www.linkedin.com/company/rr-rootrise-digital-innovations/",
+          "https://www.instagram.com/rr_rootrise/",
+          "https://www.facebook.com/profile.php?id=61592142296827",
+          "https://x.com/rrrootrise_",
+          "https://www.threads.com/@rr_rootrise",
+          "https://github.com/rrrootrisedigitalinnovations-cpu"
+        ]
+      }
+    </script>
   </head>
 
   <body>
@@ -137,9 +219,11 @@
     </noscript>
 
     <!--
-      Hidden static form used by Netlify to detect
-      the React project enquiry form during deployment.
+      Hidden static form used by Netlify
+      to detect the React project enquiry form
+      during deployment.
     -->
+
     <form
       name="rr-rootrise-project-enquiry"
       method="POST"
@@ -184,7 +268,9 @@
         </option>
       </select>
 
-      <textarea name="projectDetails"></textarea>
+      <textarea
+        name="projectDetails"
+      ></textarea>
     </form>
 
     <div id="root"></div>
