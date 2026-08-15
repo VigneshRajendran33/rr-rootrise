@@ -9,35 +9,63 @@ export const company = {
   tagline: "Strong Roots. Digital Growth.",
   startedYear: 2026,
 
-  website: "https://rrrootrise.netlify.app",
+  website: "https://rrrootrise.com",
 
-  email: "rrrootrisedigitalinnovations@gmail.com",
-  emailHref: "mailto:rrrootrisedigitalinnovations@gmail.com",
+  email: "info@rrrootrise.com",
+  emailHref: "mailto:info@rrrootrise.com",
 
-  // Show this location only in Contact page and Footer.
-  location: "Coimbatore, Tamil Nadu, India",
+  phone: "+91 72003 34187",
+  phoneDisplay: "7200334187",
+  phoneHref: "tel:+917200334187",
 
-  serviceArea: "Serving businesses across India and worldwide.",
+  location:
+    "RR RootRise Digital Innovations, 2, Kalapatti Main Rd, Periyar Nagar, Nehru Nagar West, Coimbatore, Tamil Nadu 641014, India",
+
+  city: "Coimbatore, Tamil Nadu, India",
+
+  serviceArea:
+    "Serving businesses across India and worldwide.",
 
   description:
-    "RR RootRise Digital Innovations helps businesses build strong digital foundations through professional websites, mobile applications, e-commerce platforms, custom web solutions, design, digital growth and ongoing support.",
+    "RR RootRise Digital Innovations is a Coimbatore-based software and digital solutions company helping businesses build modern websites, mobile applications, e-commerce platforms and custom software designed for real business growth.",
 
   shortDescription:
-    "Professional software and digital solutions built around real business goals.",
+    "Modern software and digital solutions engineered for growing businesses.",
 
   mission:
-    "To help businesses create clear, reliable and growth-ready digital experiences through practical strategy, design, development and continued support.",
+    "To design and engineer reliable digital products that help businesses operate better, strengthen customer experiences and grow with confidence.",
 
   vision:
-    "To become a trusted digital solutions partner for ambitious businesses across India and worldwide.",
+    "To build RR RootRise into a trusted technology partner for ambitious businesses across India and global markets.",
 
   whatsappHref:
     "https://wa.me/917200334187?text=Hello%20RR%20RootRise%2C%20I%20would%20like%20to%20discuss%20a%20project.",
+
+  linkedinHref:
+    "https://www.linkedin.com/company/rr-rootrise-digital-innovations/",
+
+  instagramHref:
+    "https://www.instagram.com/rr_rootrise/",
+
+  facebookHref:
+    "https://www.facebook.com/profile.php?id=61592142296827",
+
+  xHref: "https://x.com/rrrootrise_",
+
+  threadsHref:
+    "https://www.threads.com/@rr_rootrise",
+
+  githubHref:
+    "https://github.com/rrrootrisedigitalinnovations-cpu",
+
+  mapHref:
+    "https://www.google.com/maps/search/?api=1&query=RR%20RootRise%20Digital%20Innovations%2C%202%2C%20Kalapatti%20Main%20Rd%2C%20Periyar%20Nagar%2C%20Nehru%20Nagar%20West%2C%20Coimbatore%2C%20Tamil%20Nadu%20641014",
 };
 
 /* =========================================================
-   BRAND ASSET PATHS
+   BRAND ASSETS
    ========================================================= */
+
 export const brandAssets = {
   logo: "/images/rr-rootrise-full-logo.png",
   logoSymbol: "/images/rr-rootrise-full-logo.png",
@@ -56,21 +84,25 @@ export const navigation = [
     label: "Home",
     path: "/",
   },
+
   {
     id: "services",
     label: "Services",
     path: "/services",
   },
+
   {
     id: "industries",
     label: "Industries",
     path: "/industries",
   },
+
   {
     id: "about",
     label: "About",
     path: "/about",
   },
+
   {
     id: "contact",
     label: "Contact",
@@ -79,7 +111,7 @@ export const navigation = [
 ];
 
 /* =========================================================
-   GLOBAL CALL TO ACTION CONTENT
+   GLOBAL CALL TO ACTIONS
    ========================================================= */
 
 export const callToActions = {
@@ -120,21 +152,23 @@ export const callToActions = {
 };
 
 /* =========================================================
-   HOME PAGE HERO
+   HOME HERO
    ========================================================= */
 
 export const heroContent = {
   eyebrow: "Software & Digital Solutions",
 
-  title: "Digital Solutions Built for Real Business Growth.",
+  title:
+    "Digital Solutions Built for Real Business Growth.",
 
   description:
-    "We create professional websites, mobile applications, e-commerce platforms and custom digital solutions designed around real business needs.",
+    "We design and engineer modern websites, mobile applications, e-commerce platforms and custom software for ambitious businesses.",
 
   supportingText:
-    "Strategy, design, development, digital growth and continued support in one reliable partnership.",
+    "Strategy, design, engineering and digital growth delivered through one reliable technology partnership.",
 
   primaryAction: callToActions.primary,
+
   secondaryAction: callToActions.services,
 };
 
@@ -149,39 +183,43 @@ export const solutionPillars = [
     icon: "strategy",
     title: "Strategy",
     description:
-      "Understanding your business, audience, requirements and long-term digital goals.",
+      "Understanding business goals, audiences, requirements and long-term digital direction.",
   },
+
   {
     id: "design",
     number: "02",
     icon: "design",
     title: "Design",
     description:
-      "Creating clear, professional and user-focused digital experiences.",
+      "Creating clear, modern and user-focused digital experiences.",
   },
+
   {
     id: "development",
     number: "03",
     icon: "development",
-    title: "Development",
+    title: "Engineering",
     description:
-      "Building responsive, reliable and scalable websites and applications.",
+      "Building responsive, reliable and scalable digital products.",
   },
+
   {
     id: "growth",
     number: "04",
     icon: "growth",
     title: "Growth",
     description:
-      "Improving digital visibility, engagement and business opportunities.",
+      "Strengthening digital visibility, engagement and business opportunities.",
   },
+
   {
     id: "support",
     number: "05",
     icon: "support",
-    title: "Support",
+    title: "Partnership",
     description:
-      "Providing ongoing maintenance, guidance and future improvements.",
+      "Supporting long-term digital improvement beyond the initial launch.",
   },
 ];
 
@@ -194,14 +232,15 @@ export const services = [
     id: "website-development",
     number: "01",
     icon: "website",
+
     title: "Website Development",
     shortTitle: "Websites",
 
     summary:
-      "Professional, responsive websites designed to build trust and support real business goals.",
+      "Professional, responsive websites engineered to strengthen credibility, generate enquiries and support business growth.",
 
     description:
-      "We create modern business websites with clear content structure, professional visual identity, responsive layouts and performance-focused development.",
+      "We design and develop modern business websites with clear information architecture, professional visual systems, responsive layouts, performance-focused development and conversion-ready customer journeys.",
 
     features: [
       "Corporate and business websites",
@@ -217,22 +256,23 @@ export const services = [
     id: "mobile-app-development",
     number: "02",
     icon: "mobile",
+
     title: "Mobile App Development",
     shortTitle: "Mobile Apps",
 
     summary:
-      "User-friendly mobile application experiences designed around customer needs and business workflows.",
+      "Modern mobile experiences designed around customer journeys, business workflows and long-term scalability.",
 
     description:
-      "We create mobile application solutions that help businesses improve accessibility, customer engagement and everyday digital operations.",
+      "We create mobile application experiences that help businesses improve accessibility, customer engagement and digital operations across modern devices.",
 
     features: [
       "Business mobile applications",
       "Customer-facing applications",
-      "Mobile ordering experiences",
       "Application dashboards",
       "Progressive web applications",
       "Responsive mobile experiences",
+      "Workflow-focused app interfaces",
     ],
   },
 
@@ -240,20 +280,21 @@ export const services = [
     id: "ecommerce-solutions",
     number: "03",
     icon: "commerce",
-    title: "E-commerce Solutions",
-    shortTitle: "E-commerce",
+
+    title: "E-Commerce Development",
+    shortTitle: "E-Commerce",
 
     summary:
-      "Modern online shopping platforms with smooth product discovery, checkout and order experiences.",
+      "Commerce experiences built for product discovery, customer journeys and efficient online sales workflows.",
 
     description:
-      "We develop e-commerce solutions that help businesses manage products, customers, payments, orders and delivery workflows.",
+      "We develop e-commerce solutions that help businesses present products professionally, manage customer journeys and create clear paths from discovery to purchase.",
 
     features: [
       "Product catalogues",
       "Search and filtering",
-      "Shopping cart",
-      "Checkout experience",
+      "Shopping cart experiences",
+      "Checkout flows",
       "Payment integration",
       "Customer accounts",
       "Order management",
@@ -262,17 +303,18 @@ export const services = [
   },
 
   {
-    id: "custom-web-applications",
+    id: "custom-software",
     number: "04",
     icon: "application",
-    title: "Custom Web Applications",
-    shortTitle: "Web Applications",
+
+    title: "Custom Software Solutions",
+    shortTitle: "Custom Software",
 
     summary:
-      "Custom web-based systems created to improve business operations and customer experiences.",
+      "Purpose-built digital systems designed around specific business processes, workflows and operational requirements.",
 
     description:
-      "We build practical web applications tailored to specific business requirements, internal workflows and operational challenges.",
+      "We build custom web-based software, dashboards, portals and workflow systems that help businesses digitise operations and solve practical technology challenges.",
 
     features: [
       "Admin dashboards",
@@ -285,40 +327,18 @@ export const services = [
   },
 
   {
-    id: "wordpress-development",
-    number: "05",
-    icon: "wordpress",
-    title: "WordPress Development",
-    shortTitle: "WordPress",
-
-    summary:
-      "Flexible and manageable WordPress websites for businesses and content-focused brands.",
-
-    description:
-      "We create responsive WordPress websites with professional layouts, manageable content and business-focused functionality.",
-
-    features: [
-      "Business WordPress websites",
-      "Content-managed websites",
-      "Landing pages",
-      "Blog websites",
-      "WordPress redesign",
-      "WordPress maintenance",
-    ],
-  },
-
-  {
     id: "ui-ux-design",
-    number: "06",
+    number: "05",
     icon: "design",
+
     title: "UI/UX Design",
     shortTitle: "UI/UX Design",
 
     summary:
-      "Clear and intuitive digital interfaces designed around real users and business objectives.",
+      "Clear, modern interfaces designed around users, business goals and consistent digital experiences.",
 
     description:
-      "We plan and design professional website and application interfaces that improve clarity, usability and visual consistency.",
+      "We plan and design professional website and application interfaces that improve usability, visual clarity, navigation and product consistency.",
 
     features: [
       "Website interface design",
@@ -332,19 +352,20 @@ export const services = [
 
   {
     id: "seo",
-    number: "07",
+    number: "06",
     icon: "search",
+
     title: "SEO",
     shortTitle: "SEO",
 
     summary:
-      "Search-friendly website foundations designed to help customers discover your business.",
+      "Search-ready digital foundations created to improve discoverability, technical quality and organic visibility.",
 
     description:
-      "We improve website structure, metadata, content organisation and performance foundations to support stronger organic visibility.",
+      "We improve website structure, metadata, content organisation, technical foundations and performance factors that support stronger search visibility.",
 
     features: [
-      "Technical website structure",
+      "Technical SEO foundations",
       "Page titles and descriptions",
       "Search-friendly content structure",
       "Performance optimisation",
@@ -354,48 +375,26 @@ export const services = [
   },
 
   {
-    id: "digital-marketing",
-    number: "08",
+    id: "digital-growth",
+    number: "07",
     icon: "marketing",
-    title: "Digital Marketing",
-    shortTitle: "Digital Marketing",
+
+    title: "Digital Growth",
+    shortTitle: "Digital Growth",
 
     summary:
-      "Practical digital marketing support designed to improve brand reach and business enquiries.",
+      "Practical digital growth strategies designed to strengthen visibility, engagement and qualified business opportunities.",
 
     description:
-      "We help businesses strengthen their online presence through clear strategies, content direction and performance-focused campaigns.",
+      "We help businesses strengthen their digital presence through structured growth planning, content direction, campaign support and performance-focused improvements.",
 
     features: [
-      "Digital strategy",
-      "Social media guidance",
+      "Digital growth strategy",
       "Campaign planning",
       "Content direction",
       "Audience engagement",
+      "Conversion-focused improvements",
       "Performance monitoring",
-    ],
-  },
-
-  {
-    id: "maintenance-support",
-    number: "09",
-    icon: "support",
-    title: "Maintenance & Support",
-    shortTitle: "Support",
-
-    summary:
-      "Reliable ongoing support that keeps digital platforms updated and performing effectively.",
-
-    description:
-      "We provide continued technical assistance, maintenance and improvements after the initial website or application launch.",
-
-    features: [
-      "Content updates",
-      "Bug fixing",
-      "Performance checks",
-      "Security updates",
-      "Feature improvements",
-      "Technical support",
     ],
   },
 ];
@@ -408,63 +407,183 @@ export const industries = [
   {
     id: "retail-ecommerce",
     icon: "commerce",
-    title: "Retail & E-commerce",
+    title: "Retail & E-Commerce",
+
     description:
-      "Online stores, product catalogues, customer accounts, order management and digital shopping experiences.",
+      "Digital commerce platforms, product experiences, customer journeys and order workflows for modern retail businesses.",
   },
+
   {
     id: "food-hospitality",
     icon: "food",
-    title: "Food & Hospitality",
+    title: "Hospitality",
+
     description:
-      "Restaurant websites, cloud-kitchen ordering, digital menus, bookings and delivery workflows.",
+      "Modern websites, booking experiences, digital menus and customer-facing platforms for hospitality businesses.",
   },
+
   {
     id: "professional-services",
     icon: "business",
     title: "Professional Services",
+
     description:
-      "Digital platforms for consultants, agencies, accountants and professional service businesses.",
+      "Professional digital platforms for consultants, agencies, accounting firms and service-led organisations.",
   },
+
   {
     id: "education",
     icon: "education",
     title: "Education",
+
     description:
-      "Course websites, student portals, enquiry systems and digital learning experiences.",
+      "Course websites, institutional platforms, enquiry systems and student-focused digital experiences.",
   },
+
   {
     id: "healthcare",
     icon: "healthcare",
     title: "Healthcare",
+
     description:
-      "Professional information websites, appointment experiences and digital platforms for healthcare providers.",
+      "Professional information platforms, appointment experiences and digital solutions for healthcare organisations.",
   },
+
+  {
+    id: "real-estate",
+    icon: "location",
+    title: "Real Estate",
+
+    description:
+      "Property discovery platforms, premium listings, enquiry journeys and modern real-estate digital experiences.",
+  },
+
+  {
+    id: "fitness-wellness",
+    icon: "growth",
+    title: "Fitness & Wellness",
+
+    description:
+      "Digital experiences for gyms, fitness brands, wellness services, memberships and customer engagement.",
+  },
+
   {
     id: "startups",
     icon: "launch",
-    title: "Startups",
+    title: "Startups & Growing Businesses",
+
     description:
-      "Launch-ready websites, applications, dashboards and scalable digital foundations.",
-  },
-  {
-    id: "local-businesses",
-    icon: "location",
-    title: "Local Businesses",
-    description:
-      "Professional digital solutions for shops, service providers and growing regional businesses.",
-  },
-  {
-    id: "personal-brands",
-    icon: "brand",
-    title: "Personal Brands",
-    description:
-      "Professional websites and digital experiences for creators, consultants and industry experts.",
+      "Launch-ready websites, applications, dashboards and scalable digital foundations built for growth.",
   },
 ];
 
 /* =========================================================
-   PROJECT APPROACH
+   SELECTED WORK / PORTFOLIO
+   ========================================================= */
+
+export const portfolioProjects = [
+  {
+    id: "tamil-ver",
+    number: "01",
+
+    title: "Tamil Ver",
+
+    industry:
+      "Culture & Heritage",
+
+    type: "Demo Project",
+
+    description:
+      "A content-rich digital experience focused on Tamil heritage, culture and traditional knowledge, presented through a modern responsive interface.",
+
+    capabilities: [
+      "Responsive Web Experience",
+      "Content Architecture",
+      "UI/UX Design",
+      "Modern Frontend Development",
+    ],
+
+    liveUrl:
+      "https://rrrootrisedigitalinnovations-cpu-tamil-ver-project-v3.rrrootrise-portfolio.workers.dev/",
+  },
+
+  {
+    id: "edunova-academy",
+    number: "02",
+
+    title: "EduNova Academy",
+
+    industry: "Education",
+
+    type: "Demo Project",
+
+    description:
+      "A modern education platform concept designed around programme discovery, institutional information and student-focused digital journeys.",
+
+    capabilities: [
+      "Education Website",
+      "Responsive UI",
+      "Course Experience",
+      "Frontend Development",
+    ],
+
+    liveUrl:
+      "https://rrrootrisedigitalinnovations-cpu-edunova-academy.rrrootrise-portfolio.workers.dev",
+  },
+
+  {
+    id: "skynest-luxury-properties",
+    number: "03",
+
+    title:
+      "SkyNest Luxury Properties",
+
+    industry: "Real Estate",
+
+    type: "Demo Project",
+
+    description:
+      "A premium real-estate digital experience created around property discovery, luxury presentation, enquiries and responsive customer journeys.",
+
+    capabilities: [
+      "Property Discovery",
+      "Luxury UI/UX",
+      "Responsive Development",
+      "Lead-Focused Experience",
+    ],
+
+    liveUrl:
+      "https://skynest-luxury.rrrootrise-portfolio.workers.dev/",
+  },
+
+  {
+    id: "ironforge-fitness",
+    number: "04",
+
+    title: "IronForge Fitness",
+
+    industry:
+      "Fitness & Wellness",
+
+    type: "Demo Project",
+
+    description:
+      "A high-impact fitness website concept built around programmes, memberships, visual communication and conversion-focused calls to action.",
+
+    capabilities: [
+      "Fitness Website",
+      "Responsive Experience",
+      "Conversion-Focused UI",
+      "Modern Frontend Development",
+    ],
+
+    liveUrl:
+      "https://ironforge-fitness.rrrootrise-portfolio.workers.dev/",
+  },
+];
+
+/* =========================================================
+   PROJECT PROCESS
    ========================================================= */
 
 export const processSteps = [
@@ -472,36 +591,54 @@ export const processSteps = [
     id: "discover",
     number: "01",
     title: "Discover",
+
     description:
       "We understand your business, audience, goals, challenges and essential requirements.",
   },
+
   {
-    id: "plan",
+    id: "define",
     number: "02",
-    title: "Plan",
+    title: "Define",
+
     description:
-      "We define the project scope, content structure, features and delivery direction.",
+      "We define the project scope, structure, functionality and delivery direction.",
   },
+
   {
     id: "design",
     number: "03",
     title: "Design",
+
     description:
-      "We create a professional visual system and user experience aligned with your business.",
+      "We create a professional visual system and user experience aligned with the business.",
   },
+
   {
-    id: "develop",
+    id: "build",
     number: "04",
-    title: "Develop",
+    title: "Build",
+
     description:
-      "We build the solution with responsive layouts, stable functionality and maintainable structure.",
+      "We engineer the solution with responsive layouts, reliable functionality and maintainable structure.",
   },
+
   {
-    id: "launch-support",
+    id: "validate",
     number: "05",
-    title: "Launch & Support",
+    title: "Validate",
+
     description:
-      "We test, refine and launch the solution, then support future updates and improvements.",
+      "We review responsiveness, functionality, performance and overall user experience before launch.",
+  },
+
+  {
+    id: "launch",
+    number: "06",
+    title: "Launch",
+
+    description:
+      "We deploy the final solution and support a smooth transition into production.",
   },
 ];
 
@@ -513,44 +650,67 @@ export const advantages = [
   {
     id: "business-focused",
     icon: "strategy",
-    title: "Business-Focused Planning",
+
+    title:
+      "Business-Focused Engineering",
+
     description:
-      "Every project begins with business goals, audience needs and practical requirements.",
+      "Every solution begins with business objectives, user requirements and measurable digital priorities.",
   },
+
   {
     id: "clear-communication",
     icon: "communication",
-    title: "Clear Communication",
+
+    title:
+      "Clear Communication",
+
     description:
-      "Project requirements, progress and next steps are communicated clearly.",
+      "Project requirements, progress, decisions and next steps are communicated clearly.",
   },
+
   {
     id: "responsive-design",
     icon: "responsive",
-    title: "Responsive Experiences",
+
+    title:
+      "Responsive Experiences",
+
     description:
-      "Digital experiences are designed to work clearly across mobile, tablet and desktop devices.",
+      "Digital experiences are designed to perform clearly across mobile, tablet and desktop devices.",
   },
+
   {
     id: "scalable-solutions",
     icon: "scalable",
-    title: "Scalable Solutions",
+
+    title:
+      "Scalable Foundations",
+
     description:
-      "Solutions are structured to support future improvements and changing business requirements.",
+      "Solutions are structured to support future improvements, features and changing business requirements.",
   },
+
   {
     id: "performance",
     icon: "performance",
-    title: "Performance Focus",
+
+    title:
+      "Performance Focus",
+
     description:
-      "We focus on efficient assets, reliable functionality and smooth user experiences.",
+      "We focus on efficient assets, reliable functionality and smooth digital experiences.",
   },
+
   {
-    id: "long-term-support",
+    id: "ownership",
     icon: "support",
-    title: "Continued Support",
+
+    title:
+      "Responsible Partnership",
+
     description:
-      "We provide assistance, maintenance and guidance beyond the initial launch.",
+      "We approach projects with ownership, transparency and a long-term business mindset.",
   },
 ];
 
@@ -561,33 +721,57 @@ export const advantages = [
 export const companyPrinciples = [
   {
     number: "01",
+
     title: "Clarity",
+
     description:
       "Clear thinking, communication and digital experiences.",
   },
+
   {
     number: "02",
+
     title: "Reliability",
+
     description:
       "Dependable solutions and responsible project delivery.",
   },
+
   {
     number: "03",
-    title: "Practical Innovation",
+
+    title:
+      "Practical Innovation",
+
     description:
-      "Modern ideas applied to meaningful business requirements.",
+      "Modern technology applied to meaningful business requirements.",
   },
+
   {
     number: "04",
+
     title: "Business Value",
+
     description:
-      "Every decision should support a useful business outcome.",
+      "Every decision should contribute to a useful business outcome.",
   },
+
   {
     number: "05",
-    title: "Long-Term Support",
+
+    title: "Ownership",
+
     description:
-      "Building relationships that continue beyond the initial launch.",
+      "Taking responsibility for quality, communication and project outcomes.",
+  },
+
+  {
+    number: "06",
+
+    title: "Partnership",
+
+    description:
+      "Building professional relationships designed for long-term growth.",
   },
 ];
 
@@ -596,16 +780,22 @@ export const companyPrinciples = [
    ========================================================= */
 
 export const contactFormConfig = {
-  formName: "rr-rootrise-project-enquiry",
+  formName:
+    "rr-rootrise-project-enquiry",
 
-  title: "Tell Us About Your Project",
+  title:
+    "Tell Us About Your Project",
 
   description:
     "Share your business requirement, project idea or current digital challenge. We will review the details and respond through email.",
 
-  submitLabel: "Submit Project Enquiry",
+  submitLabel:
+    "Submit Project Enquiry",
 
-  serviceOptions: services.map((service) => service.title),
+  serviceOptions:
+    services.map(
+      (service) => service.title,
+    ),
 
   successMessage:
     "Thank you. Your project enquiry has been submitted successfully.",
@@ -623,39 +813,38 @@ export const contactFormConfig = {
 
 export const socialLinks = [
   {
+    id: "linkedin",
+    label: "LinkedIn",
+    href: company.linkedinHref,
+  },
+
+  {
     id: "instagram",
     label: "Instagram",
-    href: "https://www.instagram.com/rrrootrise.digital/",
+    href: company.instagramHref,
   },
+
   {
     id: "facebook",
     label: "Facebook",
-    href: "https://www.facebook.com/profile.php?id=61591678246723",
+    href: company.facebookHref,
   },
-  {
-    id: "linkedin",
-    label: "LinkedIn",
-    href: "https://www.linkedin.com/company/rr-rootrise-digital-innovations/",
-  },
+
   {
     id: "threads",
     label: "Threads",
-    href: "https://www.threads.com/@rrrootrise.digital",
+    href: company.threadsHref,
   },
+
   {
     id: "x",
     label: "X",
-    href: "https://x.com/rrrootrise_",
-  },
-  {
-    id: "youtube",
-    label: "YouTube",
-    href: "https://www.youtube.com/@RRRootRiseDigitalInnovations",
+    href: company.xHref,
   },
 ];
 
 /* =========================================================
-   FOOTER LINKS
+   FOOTER COMPANY LINKS
    ========================================================= */
 
 export const footerCompanyLinks = [
@@ -663,60 +852,108 @@ export const footerCompanyLinks = [
     label: "Home",
     path: "/",
   },
+
   {
     label: "About",
     path: "/about",
   },
+
   {
     label: "Industries",
     path: "/industries",
   },
+
   {
     label: "Contact",
     path: "/contact",
   },
 ];
 
+/* =========================================================
+   FOOTER SERVICE LINKS
+   ========================================================= */
+
 export const footerServiceLinks = [
   {
-    label: "Website Development",
-    path: "/services#website-development",
-  },
-  {
-    label: "Mobile App Development",
-    path: "/services#mobile-app-development",
-  },
-  {
-    label: "E-commerce Solutions",
-    path: "/services#ecommerce-solutions",
-  },
-  {
-    label: "Custom Web Applications",
-    path: "/services#custom-web-applications",
-  },
-  {
-    label: "UI/UX Design",
-    path: "/services#ui-ux-design",
-  },
-  {
-    label: "Digital Marketing",
-    path: "/services#digital-marketing",
-  },
-];
+    label:
+      "Website Development",
 
-export const legalLinks = [
-  {
-    label: "Privacy Policy",
-    path: "/privacy-policy",
+    path:
+      "/services#website-development",
   },
+
   {
-    label: "Terms of Service",
-    path: "/terms-of-service",
+    label:
+      "Mobile App Development",
+
+    path:
+      "/services#mobile-app-development",
+  },
+
+  {
+    label:
+      "E-Commerce Development",
+
+    path:
+      "/services#ecommerce-solutions",
+  },
+
+  {
+    label:
+      "Custom Software Solutions",
+
+    path:
+      "/services#custom-software",
+  },
+
+  {
+    label:
+      "UI/UX Design",
+
+    path:
+      "/services#ui-ux-design",
+  },
+
+  {
+    label: "SEO",
+
+    path:
+      "/services#seo",
+  },
+
+  {
+    label:
+      "Digital Growth",
+
+    path:
+      "/services#digital-growth",
   },
 ];
 
 /* =========================================================
-   PAGE SEO INFORMATION
+   LEGAL LINKS
+   ========================================================= */
+
+export const legalLinks = [
+  {
+    label:
+      "Privacy Policy",
+
+    path:
+      "/privacy-policy",
+  },
+
+  {
+    label:
+      "Terms of Service",
+
+    path:
+      "/terms-of-service",
+  },
+];
+
+/* =========================================================
+   PAGE SEO
    ========================================================= */
 
 export const pageMeta = {
@@ -725,23 +962,23 @@ export const pageMeta = {
       "RR RootRise Digital Innovations | Software & Digital Solutions",
 
     description:
-      "Professional websites, mobile applications, e-commerce platforms, custom web solutions, design and digital growth services for modern businesses.",
+      "Enterprise-ready websites, mobile applications, e-commerce platforms, custom software, UI/UX, SEO and digital growth solutions for modern businesses.",
   },
 
   services: {
     title:
-      "Software and Digital Services | RR RootRise Digital Innovations",
+      "Software & Digital Services | RR RootRise Digital Innovations",
 
     description:
-      "Explore website development, mobile app development, e-commerce, custom applications, UI/UX design, SEO, digital marketing and support services.",
+      "Explore website development, mobile app development, e-commerce, custom software, UI/UX design, SEO and digital growth solutions.",
   },
 
   industries: {
     title:
-      "Industries We Support | RR RootRise Digital Innovations",
+      "Industries We Serve | RR RootRise Digital Innovations",
 
     description:
-      "Digital solutions for retail, hospitality, professional services, education, healthcare, startups and growing businesses.",
+      "Digital solutions for retail, hospitality, professional services, education, healthcare, real estate, fitness and growing businesses.",
   },
 
   about: {
@@ -749,7 +986,7 @@ export const pageMeta = {
       "About RR RootRise Digital Innovations",
 
     description:
-      "Learn about the mission, vision, principles and business-focused approach behind RR RootRise Digital Innovations.",
+      "Learn about RR RootRise Digital Innovations, our mission, vision, principles and approach to building reliable digital solutions.",
   },
 
   contact: {
@@ -757,7 +994,7 @@ export const pageMeta = {
       "Start a Project | RR RootRise Digital Innovations",
 
     description:
-      "Contact RR RootRise Digital Innovations to discuss your website, mobile application, e-commerce or digital business requirement.",
+      "Contact RR RootRise Digital Innovations to discuss your website, mobile application, e-commerce, custom software or digital growth requirement.",
   },
 
   privacy: {
