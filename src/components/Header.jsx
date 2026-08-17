@@ -310,7 +310,17 @@ function Header() {
 
         .rr-brand strong b,
         .rr-mobile-title strong b {
-          color: #31d4e2;
+          color: transparent;
+
+          background:
+            linear-gradient(
+              90deg,
+              #00CC99 0%,
+              #00FFFF 100%
+            );
+
+          -webkit-background-clip: text;
+          background-clip: text;
         }
 
         .rr-brand small,
@@ -321,7 +331,17 @@ function Header() {
           letter-spacing: .18em;
           text-transform: uppercase;
 
-          color: #32cec8;
+          color: transparent;
+
+          background:
+            linear-gradient(
+              90deg,
+              #00CC99 0%,
+              #00FFFF 100%
+            );
+
+          -webkit-background-clip: text;
+          background-clip: text;
         }
 
         .rr-desktop-nav {
@@ -407,10 +427,9 @@ function Header() {
 
           background:
             linear-gradient(
-              135deg,
-              #20c6ab,
-              #31d5df,
-              #28c9e8
+              90deg,
+              #00CC99 0%,
+              #00FFFF 100%
             );
         }
 
@@ -654,10 +673,9 @@ function Header() {
 
           background:
             linear-gradient(
-              135deg,
-              #20c6ab,
-              #31d5df,
-              #28c9e8
+              90deg,
+              #00CC99 0%,
+              #00FFFF 100%
             );
         }
 

@@ -11,33 +11,56 @@ import {
 function Privacy() {
   return (
     <>
-      <PageHero
-        eyebrow="Legal Information"
-        title="Privacy Policy"
-        description="This policy explains what information may be collected through the RR RootRise website, how it is used and the choices available to website visitors."
-        primaryAction={callToActions.primary}
-      />
+      {/* ===================================================
+          HERO
+          =================================================== */}
+
+      <div className="privacy-page-hero">
+        <PageHero
+          title="Privacy Policy"
+          description="This policy explains what information may be collected through the RR RootRise website, how it is used and the choices available to website visitors."
+          primaryAction={callToActions.primary}
+        />
+      </div>
+
+      {/* ===================================================
+          PRIVACY POLICY CONTENT
+          IMPORTANT:
+          NO 'reveal' CLASS ON MAIN ARTICLE
+          =================================================== */}
 
       <section
-        className="section legal-page"
+        className="section legal-page privacy-legal-page"
         aria-labelledby="privacy-policy-title"
       >
         <div className="container-reading">
-          <article className="legal-content-card reveal">
-            <div className="legal-content">
-              <div>
-                <span className="legal-updated">
+          <article className="legal-content-card privacy-content-card">
+            <div className="legal-content privacy-legal-content">
+
+              {/* =============================================
+                  UPDATED DATE
+                  ============================================= */}
+
+              <div className="privacy-updated-wrap">
+                <span className="legal-updated privacy-updated">
                   <SiteIcon
                     name="privacy"
                     size={18}
                     strokeWidth={1.8}
                   />
 
-                  Last updated: 19 July 2026
+                  Last updated: 17 August 2026
                 </span>
               </div>
 
-              <div className="legal-section">
+              {/* =============================================
+                  INTRODUCTION
+                  ============================================= */}
+
+              <section
+                className="legal-section"
+                aria-labelledby="privacy-policy-title"
+              >
                 <h2
                   id="privacy-policy-title"
                   className="legal-section-title"
@@ -56,8 +79,11 @@ function Privacy() {
                   This Privacy Policy applies to
                   information submitted through this
                   website, including project enquiry
-                  forms, email communication and
-                  WhatsApp contact links.
+                  forms, email communication,
+                  WhatsApp contact links and
+                  information generated through
+                  website analytics and technical
+                  systems.
                 </p>
 
                 <p>
@@ -66,11 +92,15 @@ function Privacy() {
                   form, you acknowledge the practices
                   described in this policy.
                 </p>
-              </div>
+              </section>
 
-              <div className="legal-section">
+              {/* =============================================
+                  INFORMATION
+                  ============================================= */}
+
+              <section className="legal-section">
                 <h2 className="legal-section-title">
-                  1. Information We May Collect
+                  Information We May Collect
                 </h2>
 
                 <p>
@@ -80,16 +110,22 @@ function Privacy() {
                 </p>
 
                 <ul className="legal-list">
-                  <li>Your full name</li>
+                  <li>
+                    Your full name
+                  </li>
 
                   <li>
                     Business or company name, when
                     provided
                   </li>
 
-                  <li>Email address</li>
+                  <li>
+                    Email address
+                  </li>
 
-                  <li>WhatsApp contact number</li>
+                  <li>
+                    WhatsApp contact number
+                  </li>
 
                   <li>
                     The service you are interested in
@@ -102,23 +138,63 @@ function Privacy() {
                 </ul>
 
                 <p>
+                  The website also uses Google
+                  Analytics to understand general
+                  website usage and performance.
+                  Depending on the analytics
+                  configuration and visitor settings,
+                  technical and usage information may
+                  include:
+                </p>
+
+                <ul className="legal-list">
+                  <li>
+                    Website visits and session
+                    statistics
+                  </li>
+
+                  <li>
+                    Pages viewed and general website
+                    interactions
+                  </li>
+
+                  <li>
+                    Approximate geographic location
+                  </li>
+
+                  <li>
+                    Browser and device information
+                  </li>
+
+                  <li>
+                    Technical identifiers used for
+                    analytics measurement
+                  </li>
+                </ul>
+
+                <p>
                   Basic technical information may
                   also be processed by the website
-                  hosting and security systems to
-                  deliver the website, prevent misuse
-                  and maintain reliable performance.
+                  hosting, security and analytics
+                  systems to deliver the website,
+                  prevent misuse and maintain
+                  reliable performance.
                 </p>
-              </div>
+              </section>
 
-              <div className="legal-section">
+              {/* =============================================
+                  HOW INFORMATION IS USED
+                  ============================================= */}
+
+              <section className="legal-section">
                 <h2 className="legal-section-title">
-                  2. How We Use Information
+                  How We Use Information
                 </h2>
 
                 <p>
-                  Information submitted through this
-                  website may be used for the
-                  following purposes:
+                  Information submitted or generated
+                  through this website may be used
+                  for the following purposes:
                 </p>
 
                 <ul className="legal-list">
@@ -143,27 +219,41 @@ function Privacy() {
                   </li>
 
                   <li>
+                    Understanding general website
+                    traffic and usage patterns
+                  </li>
+
+                  <li>
+                    Improving website performance,
+                    usability and digital experience
+                  </li>
+
+                  <li>
                     Preventing spam, fraud and misuse
                     of the website
                   </li>
 
                   <li>
-                    Improving website reliability,
-                    usability and security
+                    Maintaining website reliability
+                    and security
                   </li>
                 </ul>
 
                 <p>
                   We will not use enquiry information
-                  for purposes that are unrelated to
-                  your communication without an
+                  for purposes unrelated to your
+                  communication without an
                   appropriate reason or permission.
                 </p>
-              </div>
+              </section>
 
-              <div className="legal-section">
+              {/* =============================================
+                  FORM SUBMISSIONS
+                  ============================================= */}
+
+              <section className="legal-section">
                 <h2 className="legal-section-title">
-                  3. Enquiry Form Submissions
+                  Enquiry Form Submissions
                 </h2>
 
                 <p>
@@ -188,11 +278,15 @@ function Privacy() {
                   unnecessary sensitive information
                   through the enquiry form.
                 </p>
-              </div>
+              </section>
 
-              <div className="legal-section">
+              {/* =============================================
+                  EMAIL & WHATSAPP
+                  ============================================= */}
+
+              <section className="legal-section">
                 <h2 className="legal-section-title">
-                  4. Email and WhatsApp Communication
+                  Email and WhatsApp Communication
                 </h2>
 
                 <p>
@@ -209,11 +303,15 @@ function Privacy() {
                   privacy practices and terms of
                   those platforms.
                 </p>
-              </div>
+              </section>
 
-              <div className="legal-section">
+              {/* =============================================
+                  INFORMATION SHARING
+                  ============================================= */}
+
+              <section className="legal-section">
                 <h2 className="legal-section-title">
-                  5. Sharing of Information
+                  Sharing of Information
                 </h2>
 
                 <p>
@@ -224,8 +322,7 @@ function Privacy() {
 
                 <p>
                   Information may be processed or
-                  shared only when reasonably
-                  necessary:
+                  shared when reasonably necessary:
                 </p>
 
                 <ul className="legal-list">
@@ -233,6 +330,13 @@ function Privacy() {
                     With service providers supporting
                     website hosting, form delivery,
                     security or communication
+                  </li>
+
+                  <li>
+                    With analytics providers such as
+                    Google for website measurement,
+                    performance analysis and
+                    reporting
                   </li>
 
                   <li>
@@ -251,11 +355,15 @@ function Privacy() {
                     specific business purpose
                   </li>
                 </ul>
-              </div>
+              </section>
 
-              <div className="legal-section">
+              {/* =============================================
+                  RETENTION
+                  ============================================= */}
+
+              <section className="legal-section">
                 <h2 className="legal-section-title">
-                  6. Information Retention
+                  Information Retention
                 </h2>
 
                 <p>
@@ -269,16 +377,29 @@ function Privacy() {
                 </p>
 
                 <p>
+                  Analytics and technical information
+                  may be retained according to the
+                  applicable settings and retention
+                  periods configured within the
+                  analytics and hosting services used
+                  by the website.
+                </p>
+
+                <p>
                   Information that is no longer
                   reasonably required may be deleted
                   or securely removed, subject to
                   applicable obligations.
                 </p>
-              </div>
+              </section>
 
-              <div className="legal-section">
+              {/* =============================================
+                  SECURITY
+                  ============================================= */}
+
+              <section className="legal-section">
                 <h2 className="legal-section-title">
-                  7. Data Security
+                  Data Security
                 </h2>
 
                 <p>
@@ -295,45 +416,91 @@ function Privacy() {
                   system can be guaranteed to be
                   completely secure.
                 </p>
-              </div>
+              </section>
 
-              <div className="legal-section">
+              {/* =============================================
+                  COOKIES / ANALYTICS
+                  ============================================= */}
+
+              <section className="legal-section">
                 <h2 className="legal-section-title">
-                  8. Cookies and Technical Storage
+                  Cookies, Analytics and Technical Storage
                 </h2>
 
                 <p>
-                  The launch version of this website
-                  does not intentionally use
-                  advertising or behavioural
-                  tracking cookies.
+                  This website uses Google Analytics
+                  to understand general website
+                  usage, visitor activity and website
+                  performance.
                 </p>
 
                 <p>
-                  Essential technical storage,
-                  security mechanisms or hosting
-                  features may still be used when
-                  required for website operation and
-                  protection.
+                  Google Analytics may process
+                  information such as the number of
+                  visitors, session statistics,
+                  approximate geographic location,
+                  browser information and device
+                  information.
                 </p>
 
                 <p>
-                  This policy will be updated before
-                  introducing analytics, advertising
-                  tracking or other non-essential
-                  technologies.
+                  Where analytics storage is
+                  available, Google Analytics may use
+                  first-party cookies, including the{" "}
+                  <strong>
+                    _ga
+                  </strong>{" "}
+                  cookie, to distinguish users and
+                  sessions for measurement purposes.
                 </p>
-              </div>
 
-              <div className="legal-section">
+                <p>
+                  Technical storage may also be used
+                  for website functionality,
+                  reliability, fraud prevention,
+                  security and other services
+                  necessary for website operation.
+                </p>
+
+                <p>
+                  Where applicable, analytics
+                  technologies may operate according
+                  to the visitor&apos;s consent
+                  choices, browser settings and the
+                  configuration of the website&apos;s
+                  analytics tools.
+                </p>
+
+                <p>
+                  Analytics information is used to
+                  understand how the website is used
+                  and to improve website performance,
+                  usability and digital experience.
+                </p>
+              </section>
+
+              {/* =============================================
+                  THIRD PARTY
+                  ============================================= */}
+
+              <section className="legal-section">
                 <h2 className="legal-section-title">
-                  9. Third-Party Links
+                  Third-Party Links and Services
                 </h2>
 
                 <p>
                   This website may contain links to
                   social-media platforms, WhatsApp
-                  and other external websites.
+                  and other external websites or
+                  services.
+                </p>
+
+                <p>
+                  The website also uses third-party
+                  technology providers, including
+                  Google Analytics, for website
+                  measurement and related technical
+                  services.
                 </p>
 
                 <p>
@@ -344,11 +511,15 @@ function Privacy() {
                   policies before providing
                   information through those services.
                 </p>
-              </div>
+              </section>
 
-              <div className="legal-section">
+              {/* =============================================
+                  USER CHOICES
+                  ============================================= */}
+
+              <section className="legal-section">
                 <h2 className="legal-section-title">
-                  10. Your Choices and Requests
+                  Your Choices and Requests
                 </h2>
 
                 <p>
@@ -359,7 +530,10 @@ function Privacy() {
                   website.
                 </p>
 
-                <p>Depending on the circumstances, you may request:</p>
+                <p>
+                  Depending on the circumstances, you
+                  may request:
+                </p>
 
                 <ul className="legal-list">
                   <li>
@@ -384,16 +558,27 @@ function Privacy() {
                 </ul>
 
                 <p>
+                  Where applicable, visitors may
+                  manage analytics or cookie choices
+                  through available website consent
+                  controls and browser settings.
+                </p>
+
+                <p>
                   Some information may need to be
                   retained when required for
                   legitimate legal, security or
                   business-record purposes.
                 </p>
-              </div>
+              </section>
 
-              <div className="legal-section">
+              {/* =============================================
+                  CHILDREN
+                  ============================================= */}
+
+              <section className="legal-section">
                 <h2 className="legal-section-title">
-                  11. Children&apos;s Privacy
+                  Children&apos;s Privacy
                 </h2>
 
                 <p>
@@ -411,18 +596,23 @@ function Privacy() {
                   request review and appropriate
                   action.
                 </p>
-              </div>
+              </section>
 
-              <div className="legal-section">
+              {/* =============================================
+                  POLICY UPDATES
+                  ============================================= */}
+
+              <section className="legal-section">
                 <h2 className="legal-section-title">
-                  12. Policy Updates
+                  Policy Updates
                 </h2>
 
                 <p>
                   This Privacy Policy may be updated
-                  when website features, business
-                  practices, service providers or
-                  applicable requirements change.
+                  when website features, analytics
+                  technologies, business practices,
+                  service providers or applicable
+                  requirements change.
                 </p>
 
                 <p>
@@ -430,11 +620,15 @@ function Privacy() {
                   published on this page with an
                   updated effective date.
                 </p>
-              </div>
+              </section>
 
-              <div className="legal-section">
+              {/* =============================================
+                  CONTACT
+                  ============================================= */}
+
+              <section className="legal-section privacy-contact-section">
                 <h2 className="legal-section-title">
-                  13. Contact
+                  Contact
                 </h2>
 
                 <p>
@@ -470,11 +664,835 @@ function Privacy() {
                     />
                   </Link>
                 </div>
-              </div>
+              </section>
+
             </div>
           </article>
         </div>
       </section>
+
+      {/* ===================================================
+          PRIVACY PAGE STYLES
+          =================================================== */}
+
+      <style>{`
+
+        :root {
+          --privacy-teal: #00CC99;
+          --privacy-cyan: #00FFFF;
+
+          --privacy-gradient:
+            linear-gradient(
+              90deg,
+              #00CC99 0%,
+              #00FFFF 100%
+            );
+        }
+
+
+        /* ==================================================
+           HERO
+           ================================================== */
+
+        .privacy-page-hero
+        .page-hero {
+          min-height:
+            auto !important;
+
+          padding-top:
+            42px !important;
+
+          padding-bottom:
+            42px !important;
+        }
+
+
+        .privacy-page-hero
+        .page-hero-inner {
+          gap:
+            16px !important;
+        }
+
+
+        .privacy-page-hero
+        .page-hero-title {
+          max-width:
+            900px !important;
+
+          margin:
+            0 !important;
+
+          line-height:
+            1.05 !important;
+        }
+
+
+        .privacy-page-hero
+        .page-hero-description {
+          max-width:
+            760px !important;
+
+          margin:
+            0 !important;
+        }
+
+
+        .privacy-page-hero
+        .page-hero-actions {
+          margin-top:
+            4px !important;
+        }
+
+
+        /* ==================================================
+           START PROJECT BUTTON
+           BOX SHAPE
+           ================================================== */
+
+        .privacy-page-hero
+        .button,
+
+        .privacy-page-hero
+        .button-primary {
+          min-height:
+            52px !important;
+
+          padding:
+            0 24px !important;
+
+          border-radius:
+            10px !important;
+
+          display:
+            inline-flex !important;
+
+          align-items:
+            center !important;
+
+          justify-content:
+            center !important;
+
+          gap:
+            12px !important;
+        }
+
+
+        .privacy-page-hero
+        .button-primary {
+          background:
+            var(--privacy-gradient) !important;
+
+          color:
+            #02151F !important;
+        }
+
+
+        .privacy-page-hero
+        .button::before,
+
+        .privacy-page-hero
+        .button::after,
+
+        .privacy-page-hero
+        .button-primary::before,
+
+        .privacy-page-hero
+        .button-primary::after {
+          border-radius:
+            10px !important;
+        }
+
+
+        /* ==================================================
+           MAIN LEGAL PAGE
+           ================================================== */
+
+        .privacy-legal-page {
+          display:
+            block !important;
+
+          width:
+            100% !important;
+
+          min-height:
+            0 !important;
+
+          padding-top:
+            28px !important;
+
+          padding-bottom:
+            42px !important;
+
+          overflow:
+            visible !important;
+        }
+
+
+        .privacy-legal-page
+        .container-reading {
+          display:
+            block !important;
+
+          width:
+            min(
+              100% - 40px,
+              1080px
+            ) !important;
+
+          height:
+            auto !important;
+
+          min-height:
+            0 !important;
+
+          margin:
+            0 auto !important;
+
+          overflow:
+            visible !important;
+        }
+
+
+        /* ==================================================
+           CRITICAL VISIBILITY FIX
+
+           NO REVEAL / OPACITY ISSUE
+           ================================================== */
+
+        .privacy-content-card {
+          display:
+            block !important;
+
+          position:
+            relative !important;
+
+          width:
+            100% !important;
+
+          height:
+            auto !important;
+
+          min-height:
+            0 !important;
+
+          margin:
+            0 !important;
+
+          padding:
+            clamp(
+              26px,
+              3vw,
+              38px
+            ) !important;
+
+          overflow:
+            visible !important;
+
+          opacity:
+            1 !important;
+
+          visibility:
+            visible !important;
+
+          transform:
+            none !important;
+
+          border-radius:
+            18px !important;
+        }
+
+
+        .privacy-content-card *,
+        .privacy-legal-content,
+        .privacy-legal-content > *,
+        .privacy-content-card
+        .legal-section {
+          visibility:
+            visible !important;
+        }
+
+
+        .privacy-legal-content {
+          display:
+            block !important;
+
+          width:
+            100% !important;
+
+          height:
+            auto !important;
+
+          min-height:
+            0 !important;
+
+          opacity:
+            1 !important;
+
+          transform:
+            none !important;
+
+          overflow:
+            visible !important;
+        }
+
+
+        /* ==================================================
+           UPDATED DATE
+           ================================================== */
+
+        .privacy-updated-wrap {
+          display:
+            block;
+
+          margin-bottom:
+            24px;
+        }
+
+
+        .privacy-updated {
+          display:
+            inline-flex !important;
+
+          align-items:
+            center;
+
+          gap:
+            9px;
+
+          margin:
+            0 !important;
+
+          padding:
+            8px 12px;
+
+          border-radius:
+            8px;
+
+          color:
+            #087F75;
+
+          background:
+            linear-gradient(
+              90deg,
+              rgba(
+                0,
+                204,
+                153,
+                0.10
+              ),
+              rgba(
+                0,
+                255,
+                255,
+                0.08
+              )
+            );
+        }
+
+
+        /* ==================================================
+           LEGAL SECTIONS
+           ================================================== */
+
+        .privacy-content-card
+        .legal-section {
+          display:
+            block !important;
+
+          position:
+            relative;
+
+          width:
+            100%;
+
+          height:
+            auto !important;
+
+          min-height:
+            0 !important;
+
+          margin:
+            0 !important;
+
+          padding:
+            25px 0 !important;
+
+          opacity:
+            1 !important;
+
+          transform:
+            none !important;
+
+          border-top:
+            1px solid
+            rgba(
+              72,
+              101,
+              118,
+              0.13
+            );
+        }
+
+
+        .privacy-content-card
+        .legal-section:first-of-type {
+          padding-top:
+            0 !important;
+
+          border-top:
+            0 !important;
+        }
+
+
+        .privacy-content-card
+        .legal-section:last-child {
+          padding-bottom:
+            0 !important;
+        }
+
+
+        /* ==================================================
+           HEADINGS
+           ================================================== */
+
+        .privacy-content-card
+        .legal-section-title {
+          position:
+            relative;
+
+          margin:
+            0 0 13px !important;
+
+          padding-left:
+            18px;
+
+          color:
+            #071725 !important;
+
+          font-size:
+            clamp(
+              23px,
+              2vw,
+              30px
+            ) !important;
+
+          font-weight:
+            700 !important;
+
+          line-height:
+            1.2 !important;
+
+          letter-spacing:
+            -0.025em;
+
+          opacity:
+            1 !important;
+        }
+
+
+        .privacy-content-card
+        .legal-section-title::before {
+          position:
+            absolute;
+
+          top:
+            0.22em;
+
+          bottom:
+            0.22em;
+
+          left:
+            0;
+
+          width:
+            4px;
+
+          content:
+            "";
+
+          border-radius:
+            999px;
+
+          background:
+            var(--privacy-gradient);
+        }
+
+
+        /* ==================================================
+           TEXT
+           ================================================== */
+
+        .privacy-content-card
+        .legal-section p {
+          display:
+            block !important;
+
+          margin:
+            0 0 12px !important;
+
+          color:
+            #516978 !important;
+
+          font-size:
+            16px !important;
+
+          font-weight:
+            400;
+
+          line-height:
+            1.72 !important;
+
+          opacity:
+            1 !important;
+        }
+
+
+        .privacy-content-card
+        .legal-section p:last-child {
+          margin-bottom:
+            0 !important;
+        }
+
+
+        .privacy-content-card
+        .legal-introduction {
+          color:
+            #203745 !important;
+
+          font-size:
+            17px !important;
+
+          font-weight:
+            600 !important;
+        }
+
+
+        .privacy-content-card
+        strong {
+          color:
+            #071725;
+        }
+
+
+        /* ==================================================
+           LISTS
+           ================================================== */
+
+        .privacy-content-card
+        .legal-list {
+          display:
+            grid !important;
+
+          gap:
+            8px !important;
+
+          margin:
+            14px 0 !important;
+
+          padding-left:
+            23px !important;
+
+          opacity:
+            1 !important;
+        }
+
+
+        .privacy-content-card
+        .legal-list li {
+          display:
+            list-item !important;
+
+          margin:
+            0 !important;
+
+          padding-left:
+            3px;
+
+          color:
+            #516978 !important;
+
+          font-size:
+            15.5px !important;
+
+          line-height:
+            1.62 !important;
+
+          opacity:
+            1 !important;
+        }
+
+
+        .privacy-content-card
+        .legal-list li::marker {
+          color:
+            #00BFAE;
+        }
+
+
+        /* ==================================================
+           CONTACT BOX
+           ================================================== */
+
+        .privacy-contact-section
+        .legal-contact-box {
+          display:
+            flex !important;
+
+          flex-direction:
+            column;
+
+          align-items:
+            flex-start;
+
+          gap:
+            9px !important;
+
+          margin-top:
+            16px !important;
+
+          padding:
+            20px !important;
+
+          border:
+            1px solid
+            rgba(
+              0,
+              204,
+              153,
+              0.16
+            );
+
+          border-radius:
+            12px !important;
+
+          background:
+            linear-gradient(
+              120deg,
+              rgba(
+                0,
+                204,
+                153,
+                0.07
+              ),
+              rgba(
+                0,
+                255,
+                255,
+                0.05
+              )
+            );
+
+          opacity:
+            1 !important;
+        }
+
+
+        .privacy-contact-section
+        .legal-contact-box strong {
+          font-size:
+            17px;
+        }
+
+
+        /* ==================================================
+           TABLET
+           ================================================== */
+
+        @media (
+          max-width: 900px
+        ) {
+
+          .privacy-page-hero
+          .page-hero {
+            padding-top:
+              36px !important;
+
+            padding-bottom:
+              38px !important;
+          }
+
+
+          .privacy-legal-page {
+            padding-top:
+              24px !important;
+
+            padding-bottom:
+              34px !important;
+          }
+
+
+          .privacy-content-card {
+            padding:
+              28px !important;
+          }
+
+
+          .privacy-content-card
+          .legal-section {
+            padding:
+              22px 0 !important;
+          }
+        }
+
+
+        /* ==================================================
+           MOBILE
+           ================================================== */
+
+        @media (
+          max-width: 600px
+        ) {
+
+          .privacy-page-hero
+          .page-hero {
+            padding-top:
+              30px !important;
+
+            padding-bottom:
+              32px !important;
+          }
+
+
+          .privacy-page-hero
+          .page-hero-inner {
+            gap:
+              13px !important;
+          }
+
+
+          .privacy-page-hero
+          .button,
+
+          .privacy-page-hero
+          .button-primary {
+            width:
+              100% !important;
+
+            min-height:
+              50px !important;
+
+            padding:
+              0 20px !important;
+
+            border-radius:
+              10px !important;
+          }
+
+
+          .privacy-legal-page {
+            padding-top:
+              18px !important;
+
+            padding-bottom:
+              26px !important;
+          }
+
+
+          .privacy-legal-page
+          .container-reading {
+            width:
+              calc(
+                100% - 24px
+              ) !important;
+          }
+
+
+          .privacy-content-card {
+            padding:
+              20px !important;
+
+            border-radius:
+              14px !important;
+          }
+
+
+          .privacy-updated-wrap {
+            margin-bottom:
+              19px;
+          }
+
+
+          .privacy-updated {
+            font-size:
+              12px;
+          }
+
+
+          .privacy-content-card
+          .legal-section {
+            padding:
+              20px 0 !important;
+          }
+
+
+          .privacy-content-card
+          .legal-section-title {
+            margin-bottom:
+              11px !important;
+
+            padding-left:
+              15px;
+
+            font-size:
+              22px !important;
+          }
+
+
+          .privacy-content-card
+          .legal-section-title::before {
+            width:
+              3px;
+          }
+
+
+          .privacy-content-card
+          .legal-section p {
+            margin-bottom:
+              10px !important;
+
+            font-size:
+              15px !important;
+
+            line-height:
+              1.67 !important;
+          }
+
+
+          .privacy-content-card
+          .legal-introduction {
+            font-size:
+              15.5px !important;
+          }
+
+
+          .privacy-content-card
+          .legal-list {
+            gap:
+              7px !important;
+
+            margin:
+              12px 0 !important;
+
+            padding-left:
+              20px !important;
+          }
+
+
+          .privacy-content-card
+          .legal-list li {
+            font-size:
+              14.5px !important;
+          }
+
+
+          .privacy-contact-section
+          .legal-contact-box {
+            padding:
+              17px !important;
+          }
+        }
+
+      `}</style>
     </>
   );
 }

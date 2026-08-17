@@ -846,8 +846,8 @@ function Home() {
           background:
             linear-gradient(
               90deg,
-              var(--rr-teal-bright),
-              var(--rr-cyan-bright)
+              #00CC99 0%,
+              #00FFFF 100%
             );
 
           -webkit-background-clip: text;
@@ -908,11 +908,15 @@ function Home() {
           color: #02151f;
 
           background:
-            var(--rr-brand-gradient);
+            linear-gradient(
+              90deg,
+              #00CC99 0%,
+              #00FFFF 100%
+            );
 
           box-shadow:
             0 14px 30px
-            rgba(39,207,226,.13);
+            rgba(0,255,255,.11);
         }
 
         .rr-btn-secondary {
@@ -1448,7 +1452,11 @@ function Home() {
           color: #031722;
 
           background:
-            var(--rr-brand-gradient);
+            linear-gradient(
+              90deg,
+              #00CC99 0%,
+              #00FFFF 100%
+            );
         }
 
         .rr-growth-title-row small {
@@ -1458,7 +1466,17 @@ function Home() {
           letter-spacing: .12em;
           text-transform: uppercase;
 
-          color: #54dcd8;
+          color: transparent;
+
+          background:
+            linear-gradient(
+              90deg,
+              #00CC99 0%,
+              #00FFFF 100%
+            );
+
+          -webkit-background-clip: text;
+          background-clip: text;
         }
 
         .rr-growth-title-row h3 {
@@ -1491,7 +1509,21 @@ function Home() {
 
           text-decoration: none;
 
-          color: #51dddd;
+          color: transparent;
+
+          background:
+            linear-gradient(
+              90deg,
+              #00CC99 0%,
+              #00FFFF 100%
+            );
+
+          -webkit-background-clip: text;
+          background-clip: text;
+        }
+
+        .rr-growth-link svg {
+          color: #00FFFF;
         }
 
         .rr-center-action {

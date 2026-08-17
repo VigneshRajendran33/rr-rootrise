@@ -11,33 +11,47 @@ import {
 function Terms() {
   return (
     <>
-      <PageHero
-        eyebrow="Legal Information"
-        title="Terms of Service"
-        description="These terms explain the general conditions for using the RR RootRise website, submitting project enquiries and discussing digital services."
-        primaryAction={callToActions.primary}
-      />
+      {/* ===================================================
+          HERO
+          =================================================== */}
+
+      <div className="terms-page-hero">
+        <PageHero
+          title="Terms of Service"
+          description="These terms explain the general conditions for using the RR RootRise website, submitting project enquiries and discussing digital services."
+          primaryAction={callToActions.primary}
+        />
+      </div>
+
+      {/* ===================================================
+          TERMS CONTENT
+          =================================================== */}
 
       <section
-        className="section legal-page"
+        className="section legal-page terms-legal-page"
         aria-labelledby="terms-title"
       >
         <div className="container-reading">
-<article className="legal-content-card">      
-            <div className="legal-content">
-              <div>
-                <span className="legal-updated">
+          <article className="legal-content-card terms-content-card">
+            <div className="legal-content terms-legal-content">
+
+              {/* UPDATED */}
+
+              <div className="terms-updated-wrap">
+                <span className="legal-updated terms-updated">
                   <SiteIcon
                     name="shield"
                     size={18}
                     strokeWidth={1.8}
                   />
 
-                  Last updated: 19 July 2026
+                  Last updated: 17 August 2026
                 </span>
               </div>
 
-              <div className="legal-section">
+              {/* INTRODUCTION */}
+
+              <section className="legal-section">
                 <h2
                   id="terms-title"
                   className="legal-section-title"
@@ -65,11 +79,13 @@ function Terms() {
                   relationship, service agreement or
                   obligation to begin a project.
                 </p>
-              </div>
+              </section>
 
-              <div className="legal-section">
+              {/* WEBSITE PURPOSE */}
+
+              <section className="legal-section">
                 <h2 className="legal-section-title">
-                  1. Website Purpose
+                  Website Purpose
                 </h2>
 
                 <p>
@@ -87,11 +103,13 @@ function Terms() {
                   when services or business
                   requirements change.
                 </p>
-              </div>
+              </section>
 
-              <div className="legal-section">
+              {/* SERVICE ENQUIRIES */}
+
+              <section className="legal-section">
                 <h2 className="legal-section-title">
-                  2. Service Enquiries
+                  Service Enquiries
                 </h2>
 
                 <p>
@@ -100,21 +118,37 @@ function Terms() {
                 </p>
 
                 <ul className="legal-list">
-                  <li>Website development</li>
+                  <li>
+                    Website development
+                  </li>
 
-                  <li>Mobile app development</li>
+                  <li>
+                    Mobile app development
+                  </li>
 
-                  <li>E-commerce solutions</li>
+                  <li>
+                    E-commerce solutions
+                  </li>
 
-                  <li>Custom web applications</li>
+                  <li>
+                    Custom web applications
+                  </li>
 
-                  <li>WordPress development</li>
+                  <li>
+                    WordPress development
+                  </li>
 
-                  <li>UI/UX design</li>
+                  <li>
+                    UI/UX design
+                  </li>
 
-                  <li>SEO and digital marketing</li>
+                  <li>
+                    SEO and digital marketing
+                  </li>
 
-                  <li>Maintenance and support</li>
+                  <li>
+                    Maintenance and support
+                  </li>
                 </ul>
 
                 <p>
@@ -123,12 +157,13 @@ function Terms() {
                   detail for the requested service to
                   be understood.
                 </p>
-              </div>
+              </section>
 
-              <div className="legal-section">
+              {/* PROJECT DISCUSSIONS */}
+
+              <section className="legal-section">
                 <h2 className="legal-section-title">
-                  3. Project Discussions and
-                  Proposals
+                  Project Discussions and Proposals
                 </h2>
 
                 <p>
@@ -155,11 +190,13 @@ function Terms() {
                   required initial payment is
                   completed.
                 </p>
-              </div>
+              </section>
 
-              <div className="legal-section">
+              {/* CLIENT RESPONSIBILITIES */}
+
+              <section className="legal-section">
                 <h2 className="legal-section-title">
-                  4. Client Responsibilities
+                  Client Responsibilities
                 </h2>
 
                 <p>
@@ -203,12 +240,13 @@ function Terms() {
                   approvals may affect the project
                   timeline.
                 </p>
-              </div>
+              </section>
 
-              <div className="legal-section">
+              {/* INTELLECTUAL PROPERTY */}
+
+              <section className="legal-section">
                 <h2 className="legal-section-title">
-                  5. Content and Intellectual
-                  Property
+                  Content and Intellectual Property
                 </h2>
 
                 <p>
@@ -238,11 +276,13 @@ function Terms() {
                   copied or represented as another
                   business without permission.
                 </p>
-              </div>
+              </section>
 
-              <div className="legal-section">
+              {/* PAYMENTS */}
+
+              <section className="legal-section">
                 <h2 className="legal-section-title">
-                  6. Payments and Additional Work
+                  Payments and Additional Work
                 </h2>
 
                 <p>
@@ -267,11 +307,13 @@ function Terms() {
                   included unless specifically stated
                   in writing.
                 </p>
-              </div>
+              </section>
 
-              <div className="legal-section">
+              {/* REVISIONS */}
+
+              <section className="legal-section">
                 <h2 className="legal-section-title">
-                  7. Revisions and Approvals
+                  Revisions and Approvals
                 </h2>
 
                 <p>
@@ -292,11 +334,13 @@ function Terms() {
                   client has reviewed the relevant
                   design, content or functionality.
                 </p>
-              </div>
+              </section>
 
-              <div className="legal-section">
+              {/* TIMELINES */}
+
+              <section className="legal-section">
                 <h2 className="legal-section-title">
-                  8. Project Timelines
+                  Project Timelines
                 </h2>
 
                 <p>
@@ -320,11 +364,13 @@ function Terms() {
                   be communicated through the
                   available project contact channel.
                 </p>
-              </div>
+              </section>
 
-              <div className="legal-section">
+              {/* THIRD PARTY SERVICES */}
+
+              <section className="legal-section">
                 <h2 className="legal-section-title">
-                  9. Third-Party Services
+                  Third-Party Services
                 </h2>
 
                 <p>
@@ -348,11 +394,13 @@ function Terms() {
                   uninterrupted operation of
                   independent third-party platforms.
                 </p>
-              </div>
+              </section>
 
-              <div className="legal-section">
+              {/* WEBSITE AVAILABILITY */}
+
+              <section className="legal-section">
                 <h2 className="legal-section-title">
-                  10. Website Availability
+                  Website Availability
                 </h2>
 
                 <p>
@@ -374,11 +422,13 @@ function Terms() {
                   suspended or discontinued when
                   necessary.
                 </p>
-              </div>
+              </section>
 
-              <div className="legal-section">
+              {/* ACCEPTABLE USE */}
+
+              <section className="legal-section">
                 <h2 className="legal-section-title">
-                  11. Acceptable Use
+                  Acceptable Use
                 </h2>
 
                 <p>
@@ -414,11 +464,13 @@ function Terms() {
                     website content
                   </li>
                 </ul>
-              </div>
+              </section>
 
-              <div className="legal-section">
+              {/* RESULTS */}
+
+              <section className="legal-section">
                 <h2 className="legal-section-title">
-                  12. No Guaranteed Business Results
+                  No Guaranteed Business Results
                 </h2>
 
                 <p>
@@ -445,11 +497,13 @@ function Terms() {
                   advertising and other factors
                   outside the project itself.
                 </p>
-              </div>
+              </section>
 
-              <div className="legal-section">
+              {/* RESPONSIBILITY */}
+
+              <section className="legal-section">
                 <h2 className="legal-section-title">
-                  13. Limitation of Responsibility
+                  Limitation of Responsibility
                 </h2>
 
                 <p>
@@ -475,11 +529,13 @@ function Terms() {
                   failures, external modifications or
                   use outside the agreed purpose.
                 </p>
-              </div>
+              </section>
 
-              <div className="legal-section">
+              {/* TERMINATION */}
+
+              <section className="legal-section">
                 <h2 className="legal-section-title">
-                  14. Suspension or Termination
+                  Suspension or Termination
                 </h2>
 
                 <p>
@@ -498,11 +554,13 @@ function Terms() {
                   applicable proposal or written
                   agreement.
                 </p>
-              </div>
+              </section>
 
-              <div className="legal-section">
+              {/* PRIVACY */}
+
+              <section className="legal-section">
                 <h2 className="legal-section-title">
-                  15. Privacy
+                  Privacy
                 </h2>
 
                 <p>
@@ -524,11 +582,13 @@ function Terms() {
                   unnecessary sensitive information
                   through the general enquiry form.
                 </p>
-              </div>
+              </section>
 
-              <div className="legal-section">
+              {/* CHANGES */}
+
+              <section className="legal-section">
                 <h2 className="legal-section-title">
-                  16. Changes to These Terms
+                  Changes to These Terms
                 </h2>
 
                 <p>
@@ -543,11 +603,13 @@ function Terms() {
                   published on this page with an
                   updated effective date.
                 </p>
-              </div>
+              </section>
 
-              <div className="legal-section">
+              {/* GOVERNING REQUIREMENTS */}
+
+              <section className="legal-section">
                 <h2 className="legal-section-title">
-                  17. Governing Requirements
+                  Governing Requirements
                 </h2>
 
                 <p>
@@ -563,11 +625,13 @@ function Terms() {
                   may be defined separately in the
                   relevant written agreement.
                 </p>
-              </div>
+              </section>
 
-              <div className="legal-section">
+              {/* CONTACT */}
+
+              <section className="legal-section terms-contact-section">
                 <h2 className="legal-section-title">
-                  18. Contact
+                  Contact
                 </h2>
 
                 <p>
@@ -604,11 +668,914 @@ function Terms() {
                     />
                   </Link>
                 </div>
-              </div>
+              </section>
+
             </div>
           </article>
         </div>
       </section>
+
+      {/* ===================================================
+          TERMS PAGE STYLES
+          =================================================== */}
+
+      <style>{`
+
+        :root {
+          --terms-teal: #00CC99;
+          --terms-cyan: #00FFFF;
+
+          --terms-gradient:
+            linear-gradient(
+              90deg,
+              #00CC99 0%,
+              #00FFFF 100%
+            );
+        }
+
+
+        /* ==================================================
+           HERO
+           ================================================== */
+
+        .terms-page-hero
+        .page-hero {
+          min-height:
+            auto !important;
+
+          padding-top:
+            clamp(
+              38px,
+              4vw,
+              56px
+            ) !important;
+
+          padding-bottom:
+            clamp(
+              38px,
+              4vw,
+              52px
+            ) !important;
+        }
+
+
+        .terms-page-hero
+        .page-hero-inner {
+          gap:
+            15px !important;
+        }
+
+
+        /*
+          Remove any empty/default eyebrow
+        */
+
+        .terms-page-hero
+        .page-hero-eyebrow:empty {
+          display:
+            none !important;
+        }
+
+
+        .terms-page-hero
+        .page-hero-title {
+          max-width:
+            900px !important;
+
+          margin:
+            0 !important;
+
+          line-height:
+            1.04 !important;
+        }
+
+
+        .terms-page-hero
+        .page-hero-description {
+          max-width:
+            780px !important;
+
+          margin:
+            0 !important;
+
+          font-size:
+            clamp(
+              16px,
+              1.35vw,
+              19px
+            ) !important;
+
+          line-height:
+            1.65 !important;
+        }
+
+
+        .terms-page-hero
+        .page-hero-actions {
+          margin-top:
+            4px !important;
+        }
+
+
+        /* ==================================================
+           START A PROJECT
+           SAME BOX SHAPE
+           ================================================== */
+
+        .terms-page-hero
+        .button,
+
+        .terms-page-hero
+        .button-primary {
+          display:
+            inline-flex !important;
+
+          align-items:
+            center !important;
+
+          justify-content:
+            center !important;
+
+          min-height:
+            52px !important;
+
+          padding:
+            0 24px !important;
+
+          gap:
+            12px !important;
+
+          border-radius:
+            10px !important;
+        }
+
+
+        .terms-page-hero
+        .button-primary {
+          color:
+            #02151F !important;
+
+          background:
+            var(--terms-gradient) !important;
+        }
+
+
+        .terms-page-hero
+        .button::before,
+
+        .terms-page-hero
+        .button::after,
+
+        .terms-page-hero
+        .button-primary::before,
+
+        .terms-page-hero
+        .button-primary::after {
+          border-radius:
+            10px !important;
+        }
+
+
+        /* ==================================================
+           MAIN PAGE
+           ================================================== */
+
+        .terms-legal-page {
+          display:
+            block !important;
+
+          width:
+            100% !important;
+
+          min-height:
+            0 !important;
+
+          padding-top:
+            28px !important;
+
+          padding-bottom:
+            42px !important;
+
+          overflow:
+            visible !important;
+        }
+
+
+        .terms-legal-page
+        .container-reading {
+          display:
+            block !important;
+
+          width:
+            min(
+              calc(100% - 40px),
+              1080px
+            ) !important;
+
+          height:
+            auto !important;
+
+          min-height:
+            0 !important;
+
+          margin:
+            0 auto !important;
+
+          overflow:
+            visible !important;
+        }
+
+
+        /* ==================================================
+           MAIN CARD
+           NO REVEAL / HIDDEN ISSUE
+           ================================================== */
+
+        .terms-content-card {
+          display:
+            block !important;
+
+          position:
+            relative;
+
+          width:
+            100% !important;
+
+          height:
+            auto !important;
+
+          min-height:
+            0 !important;
+
+          margin:
+            0 !important;
+
+          padding:
+            clamp(
+              26px,
+              3vw,
+              38px
+            ) !important;
+
+          overflow:
+            visible !important;
+
+          opacity:
+            1 !important;
+
+          visibility:
+            visible !important;
+
+          transform:
+            none !important;
+
+          border-radius:
+            18px !important;
+        }
+
+
+        .terms-legal-content {
+          display:
+            block !important;
+
+          width:
+            100% !important;
+
+          height:
+            auto !important;
+
+          min-height:
+            0 !important;
+
+          overflow:
+            visible !important;
+
+          opacity:
+            1 !important;
+
+          visibility:
+            visible !important;
+
+          transform:
+            none !important;
+        }
+
+
+        .terms-content-card *,
+        .terms-legal-content *,
+        .terms-content-card
+        .legal-section {
+          visibility:
+            visible !important;
+        }
+
+
+        /* ==================================================
+           UPDATED DATE
+           ================================================== */
+
+        .terms-updated-wrap {
+          display:
+            block;
+
+          margin:
+            0 0 23px;
+        }
+
+
+        .terms-updated {
+          display:
+            inline-flex !important;
+
+          align-items:
+            center;
+
+          gap:
+            9px;
+
+          margin:
+            0 !important;
+
+          padding:
+            8px 12px;
+
+          color:
+            #087F75 !important;
+
+          border:
+            1px solid
+            rgba(
+              0,
+              204,
+              153,
+              0.12
+            );
+
+          border-radius:
+            8px !important;
+
+          background:
+            linear-gradient(
+              90deg,
+              rgba(
+                0,
+                204,
+                153,
+                0.10
+              ),
+              rgba(
+                0,
+                255,
+                255,
+                0.07
+              )
+            );
+        }
+
+
+        /* ==================================================
+           SECTIONS
+           ================================================== */
+
+        .terms-content-card
+        .legal-section {
+          display:
+            block !important;
+
+          position:
+            relative;
+
+          width:
+            100%;
+
+          height:
+            auto !important;
+
+          min-height:
+            0 !important;
+
+          margin:
+            0 !important;
+
+          padding:
+            24px 0 !important;
+
+          opacity:
+            1 !important;
+
+          visibility:
+            visible !important;
+
+          transform:
+            none !important;
+
+          border-top:
+            1px solid
+            rgba(
+              72,
+              101,
+              118,
+              0.13
+            );
+        }
+
+
+        .terms-content-card
+        .legal-section:first-of-type {
+          padding-top:
+            0 !important;
+
+          border-top:
+            0 !important;
+        }
+
+
+        .terms-content-card
+        .legal-section:last-child {
+          padding-bottom:
+            0 !important;
+        }
+
+
+        /* ==================================================
+           HEADINGS
+           NO NUMBERS
+           ================================================== */
+
+        .terms-content-card
+        .legal-section-title {
+          position:
+            relative;
+
+          margin:
+            0 0 13px !important;
+
+          padding-left:
+            18px;
+
+          color:
+            #071725 !important;
+
+          font-size:
+            clamp(
+              23px,
+              2vw,
+              30px
+            ) !important;
+
+          font-weight:
+            700 !important;
+
+          line-height:
+            1.2 !important;
+
+          letter-spacing:
+            -0.025em;
+
+          opacity:
+            1 !important;
+        }
+
+
+        /*
+          Teal + Cyan replaces
+          decorative numbering
+        */
+
+        .terms-content-card
+        .legal-section-title::before {
+          position:
+            absolute;
+
+          top:
+            0.23em;
+
+          bottom:
+            0.23em;
+
+          left:
+            0;
+
+          width:
+            4px;
+
+          content:
+            "";
+
+          border-radius:
+            999px;
+
+          background:
+            var(--terms-gradient);
+        }
+
+
+        /* ==================================================
+           CONTENT
+           ================================================== */
+
+        .terms-content-card
+        .legal-section p {
+          display:
+            block !important;
+
+          margin:
+            0 0 11px !important;
+
+          color:
+            #516978 !important;
+
+          font-size:
+            16px !important;
+
+          font-weight:
+            400;
+
+          line-height:
+            1.7 !important;
+
+          opacity:
+            1 !important;
+        }
+
+
+        .terms-content-card
+        .legal-section p:last-child {
+          margin-bottom:
+            0 !important;
+        }
+
+
+        .terms-content-card
+        .legal-introduction {
+          color:
+            #203745 !important;
+
+          font-size:
+            17px !important;
+
+          font-weight:
+            600 !important;
+        }
+
+
+        .terms-content-card
+        strong {
+          color:
+            #071725;
+        }
+
+
+        /* ==================================================
+           LISTS
+           ================================================== */
+
+        .terms-content-card
+        .legal-list {
+          display:
+            grid !important;
+
+          gap:
+            8px !important;
+
+          margin:
+            13px 0 !important;
+
+          padding-left:
+            23px !important;
+
+          opacity:
+            1 !important;
+        }
+
+
+        .terms-content-card
+        .legal-list li {
+          display:
+            list-item !important;
+
+          margin:
+            0 !important;
+
+          padding-left:
+            3px;
+
+          color:
+            #516978 !important;
+
+          font-size:
+            15.5px !important;
+
+          line-height:
+            1.62 !important;
+
+          opacity:
+            1 !important;
+        }
+
+
+        .terms-content-card
+        .legal-list li::marker {
+          color:
+            #00BFAE;
+        }
+
+
+        /* ==================================================
+           LINKS
+           ================================================== */
+
+        .terms-content-card
+        .inline-link {
+          color:
+            #008F82 !important;
+
+          font-weight:
+            650;
+        }
+
+
+        .terms-content-card
+        .inline-link:hover {
+          color:
+            #00AFA9 !important;
+        }
+
+
+        /* ==================================================
+           CONTACT
+           ================================================== */
+
+        .terms-contact-section
+        .legal-contact-box {
+          display:
+            flex !important;
+
+          flex-direction:
+            column;
+
+          align-items:
+            flex-start;
+
+          gap:
+            9px !important;
+
+          margin-top:
+            15px !important;
+
+          padding:
+            20px !important;
+
+          opacity:
+            1 !important;
+
+          border:
+            1px solid
+            rgba(
+              0,
+              204,
+              153,
+              0.15
+            );
+
+          border-radius:
+            12px !important;
+
+          background:
+            linear-gradient(
+              120deg,
+              rgba(
+                0,
+                204,
+                153,
+                0.07
+              ),
+              rgba(
+                0,
+                255,
+                255,
+                0.05
+              )
+            );
+        }
+
+
+        .terms-contact-section
+        .legal-contact-box strong {
+          font-size:
+            17px;
+        }
+
+
+        /* ==================================================
+           TABLET
+           ================================================== */
+
+        @media (
+          max-width: 900px
+        ) {
+
+          .terms-page-hero
+          .page-hero {
+            padding-top:
+              36px !important;
+
+            padding-bottom:
+              38px !important;
+          }
+
+
+          .terms-legal-page {
+            padding-top:
+              24px !important;
+
+            padding-bottom:
+              34px !important;
+          }
+
+
+          .terms-content-card {
+            padding:
+              28px !important;
+          }
+
+
+          .terms-content-card
+          .legal-section {
+            padding:
+              22px 0 !important;
+          }
+        }
+
+
+        /* ==================================================
+           MOBILE
+           ================================================== */
+
+        @media (
+          max-width: 600px
+        ) {
+
+          .terms-page-hero
+          .page-hero {
+            padding-top:
+              30px !important;
+
+            padding-bottom:
+              32px !important;
+          }
+
+
+          .terms-page-hero
+          .page-hero-inner {
+            gap:
+              13px !important;
+          }
+
+
+          .terms-page-hero
+          .page-hero-description {
+            font-size:
+              15px !important;
+
+            line-height:
+              1.62 !important;
+          }
+
+
+          .terms-page-hero
+          .button,
+
+          .terms-page-hero
+          .button-primary {
+            width:
+              100% !important;
+
+            min-height:
+              50px !important;
+
+            padding:
+              0 20px !important;
+
+            border-radius:
+              10px !important;
+          }
+
+
+          .terms-legal-page {
+            padding-top:
+              18px !important;
+
+            padding-bottom:
+              26px !important;
+          }
+
+
+          .terms-legal-page
+          .container-reading {
+            width:
+              calc(
+                100% - 24px
+              ) !important;
+          }
+
+
+          .terms-content-card {
+            padding:
+              20px !important;
+
+            border-radius:
+              14px !important;
+          }
+
+
+          .terms-updated-wrap {
+            margin-bottom:
+              19px;
+          }
+
+
+          .terms-updated {
+            font-size:
+              12px;
+          }
+
+
+          .terms-content-card
+          .legal-section {
+            padding:
+              20px 0 !important;
+          }
+
+
+          .terms-content-card
+          .legal-section-title {
+            margin-bottom:
+              11px !important;
+
+            padding-left:
+              15px;
+
+            font-size:
+              22px !important;
+          }
+
+
+          .terms-content-card
+          .legal-section-title::before {
+            width:
+              3px;
+          }
+
+
+          .terms-content-card
+          .legal-section p {
+            margin-bottom:
+              10px !important;
+
+            font-size:
+              15px !important;
+
+            line-height:
+              1.67 !important;
+          }
+
+
+          .terms-content-card
+          .legal-introduction {
+            font-size:
+              15.5px !important;
+          }
+
+
+          .terms-content-card
+          .legal-list {
+            gap:
+              7px !important;
+
+            margin:
+              12px 0 !important;
+
+            padding-left:
+              20px !important;
+          }
+
+
+          .terms-content-card
+          .legal-list li {
+            font-size:
+              14.5px !important;
+          }
+
+
+          .terms-contact-section
+          .legal-contact-box {
+            padding:
+              17px !important;
+          }
+        }
+
+      `}</style>
     </>
   );
 }

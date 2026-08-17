@@ -1,5 +1,11 @@
-import { useEffect } from "react";
 import {
+  lazy,
+  Suspense,
+  useEffect,
+} from "react";
+
+import {
+  Navigate,
   Route,
   Routes,
   useLocation,
@@ -9,21 +15,103 @@ import Header from "./components/Header";
 import Footer from "./components/Footer";
 import ScrollReveal from "./components/ScrollReveal";
 import ScrollToTop from "./components/ScrollToTop";
-import WhatsAppButton from "./components/WhatsAppButton";
-
-import Home from "./pages/Home";
-import Services from "./pages/Services";
-import Industries from "./pages/Industries";
-import About from "./pages/About";
-import Contact from "./pages/Contact";
-import Privacy from "./pages/Privacy";
-import Terms from "./pages/Terms";
-import NotFound from "./pages/NotFound";
+import RRChatAssistant from "./components/RRChatAssistant";
 
 import {
   company,
   pageMeta,
 } from "./data/siteData";
+
+/* =========================================================
+   LAZY LOADED PAGES
+   ROUTE-LEVEL CODE SPLITTING
+   ========================================================= */
+
+const Home = lazy(
+  () => import("./pages/Home"),
+);
+
+const Services = lazy(
+  () => import("./pages/Services"),
+);
+
+const Industries = lazy(
+  () => import("./pages/Industries"),
+);
+
+const About = lazy(
+  () => import("./pages/About"),
+);
+
+const Contact = lazy(
+  () => import("./pages/Contact"),
+);
+
+const Privacy = lazy(
+  () => import("./pages/Privacy"),
+);
+
+const Terms = lazy(
+  () => import("./pages/Terms"),
+);
+
+const NotFound = lazy(
+  () => import("./pages/NotFound"),
+);
+
+/* =========================================================
+   PAGE LOADER
+   ========================================================= */
+
+function PageLoader() {
+  return (
+    <div
+      style={{
+        minHeight: "55vh",
+        display: "grid",
+        placeItems: "center",
+        background: "#02101c",
+      }}
+      role="status"
+      aria-live="polite"
+    >
+      <div
+        style={{
+          width: "34px",
+          height: "34px",
+          border:
+            "3px solid rgba(0, 238, 216, 0.16)",
+          borderTopColor:
+            "#00EED8",
+          borderRadius:
+            "50%",
+          animation:
+            "rr-page-loader-spin 0.7s linear infinite",
+        }}
+      />
+
+      <style>{`
+        @keyframes rr-page-loader-spin {
+          to {
+            transform: rotate(360deg);
+          }
+        }
+
+        @media (
+          prefers-reduced-motion: reduce
+        ) {
+          div[role="status"] > div {
+            animation: none !important;
+          }
+        }
+      `}</style>
+    </div>
+  );
+}
+
+/* =========================================================
+   PAGE META
+   ========================================================= */
 
 function getPageMeta(pathname) {
   switch (pathname) {
@@ -42,9 +130,11 @@ function getPageMeta(pathname) {
     case "/contact":
       return pageMeta.contact;
 
+    case "/privacy":
     case "/privacy-policy":
       return pageMeta.privacy;
 
+    case "/terms":
     case "/terms-of-service":
       return pageMeta.terms;
 
@@ -53,23 +143,88 @@ function getPageMeta(pathname) {
   }
 }
 
+/* =========================================================
+   CANONICAL PATH
+   ========================================================= */
+
+function getCanonicalPath(pathname) {
+  if (pathname === "/privacy") {
+    return "/privacy-policy";
+  }
+
+  if (pathname === "/terms") {
+    return "/terms-of-service";
+  }
+
+  if (pathname === "/") {
+    return "";
+  }
+
+  return pathname;
+}
+
+/* =========================================================
+   WEBSITE BASE URL
+   ========================================================= */
+
+function getWebsiteBaseUrl() {
+  return company.website.replace(
+    /\/+$/,
+    "",
+  );
+}
+
+/* =========================================================
+   ROUTE MANAGER
+   SEO + SCROLL
+   ========================================================= */
+
 function RouteManager() {
-  const location = useLocation();
+  const location =
+    useLocation();
+
+  /* =======================================================
+     SEO META
+     ======================================================= */
 
   useEffect(() => {
-    const currentMeta = getPageMeta(
-      location.pathname,
-    );
+    const currentMeta =
+      getPageMeta(
+        location.pathname,
+      );
 
-    document.title = currentMeta.title;
+    const canonicalPath =
+      getCanonicalPath(
+        location.pathname,
+      );
 
-    let descriptionMeta = document.querySelector(
-      'meta[name="description"]',
-    );
+    const websiteBase =
+      getWebsiteBaseUrl();
+
+    const canonicalUrl =
+      `${websiteBase}${canonicalPath || "/"}`;
+
+    /* =====================================================
+       DOCUMENT TITLE
+       ===================================================== */
+
+    document.title =
+      currentMeta.title;
+
+    /* =====================================================
+       META DESCRIPTION
+       ===================================================== */
+
+    let descriptionMeta =
+      document.querySelector(
+        'meta[name="description"]',
+      );
 
     if (!descriptionMeta) {
       descriptionMeta =
-        document.createElement("meta");
+        document.createElement(
+          "meta",
+        );
 
       descriptionMeta.setAttribute(
         "name",
@@ -86,13 +241,20 @@ function RouteManager() {
       currentMeta.description,
     );
 
-    let canonicalLink = document.querySelector(
-      'link[rel="canonical"]',
-    );
+    /* =====================================================
+       CANONICAL
+       ===================================================== */
+
+    let canonicalLink =
+      document.querySelector(
+        'link[rel="canonical"]',
+      );
 
     if (!canonicalLink) {
       canonicalLink =
-        document.createElement("link");
+        document.createElement(
+          "link",
+        );
 
       canonicalLink.setAttribute(
         "rel",
@@ -104,46 +266,157 @@ function RouteManager() {
       );
     }
 
-    const canonicalPath =
-      location.pathname === "/"
-        ? ""
-        : location.pathname;
-
     canonicalLink.setAttribute(
       "href",
-      `${company.website}${canonicalPath}`,
+      canonicalUrl,
     );
 
-    const openGraphTitle =
+    /* =====================================================
+       OPEN GRAPH
+       ===================================================== */
+
+    let openGraphTitle =
       document.querySelector(
         'meta[property="og:title"]',
       );
 
-    const openGraphDescription =
+    let openGraphDescription =
       document.querySelector(
         'meta[property="og:description"]',
       );
 
-    const openGraphUrl =
+    let openGraphUrl =
       document.querySelector(
         'meta[property="og:url"]',
       );
 
-    openGraphTitle?.setAttribute(
+    if (!openGraphTitle) {
+      openGraphTitle =
+        document.createElement(
+          "meta",
+        );
+
+      openGraphTitle.setAttribute(
+        "property",
+        "og:title",
+      );
+
+      document.head.appendChild(
+        openGraphTitle,
+      );
+    }
+
+    if (
+      !openGraphDescription
+    ) {
+      openGraphDescription =
+        document.createElement(
+          "meta",
+        );
+
+      openGraphDescription.setAttribute(
+        "property",
+        "og:description",
+      );
+
+      document.head.appendChild(
+        openGraphDescription,
+      );
+    }
+
+    if (!openGraphUrl) {
+      openGraphUrl =
+        document.createElement(
+          "meta",
+        );
+
+      openGraphUrl.setAttribute(
+        "property",
+        "og:url",
+      );
+
+      document.head.appendChild(
+        openGraphUrl,
+      );
+    }
+
+    openGraphTitle.setAttribute(
       "content",
       currentMeta.title,
     );
 
-    openGraphDescription?.setAttribute(
+    openGraphDescription.setAttribute(
       "content",
       currentMeta.description,
     );
 
-    openGraphUrl?.setAttribute(
+    openGraphUrl.setAttribute(
       "content",
-      `${company.website}${canonicalPath}`,
+      canonicalUrl,
+    );
+
+    /* =====================================================
+       X / TWITTER
+       ===================================================== */
+
+    let twitterTitle =
+      document.querySelector(
+        'meta[name="twitter:title"]',
+      );
+
+    let twitterDescription =
+      document.querySelector(
+        'meta[name="twitter:description"]',
+      );
+
+    if (!twitterTitle) {
+      twitterTitle =
+        document.createElement(
+          "meta",
+        );
+
+      twitterTitle.setAttribute(
+        "name",
+        "twitter:title",
+      );
+
+      document.head.appendChild(
+        twitterTitle,
+      );
+    }
+
+    if (
+      !twitterDescription
+    ) {
+      twitterDescription =
+        document.createElement(
+          "meta",
+        );
+
+      twitterDescription.setAttribute(
+        "name",
+        "twitter:description",
+      );
+
+      document.head.appendChild(
+        twitterDescription,
+      );
+    }
+
+    twitterTitle.setAttribute(
+      "content",
+      currentMeta.title,
+    );
+
+    twitterDescription.setAttribute(
+      "content",
+      currentMeta.description,
     );
   }, [location.pathname]);
+
+  /* =======================================================
+     SCROLL TO TOP
+     ======================================================= */
 
   useEffect(() => {
     if (location.hash) {
@@ -163,9 +436,16 @@ function RouteManager() {
   return null;
 }
 
+/* =========================================================
+   APP
+   ========================================================= */
+
 function App() {
   return (
     <div className="site-shell">
+
+      {/* ACCESSIBILITY */}
+
       <a
         href="#main-content"
         className="skip-link"
@@ -173,61 +453,134 @@ function App() {
         Skip to main content
       </a>
 
+      {/* HEADER */}
+
       <Header />
+
+      {/* ROUTE UTILITIES */}
 
       <RouteManager />
 
       <ScrollReveal />
 
+      {/* MAIN CONTENT */}
+
       <main id="main-content">
-        <Routes>
-          <Route
-            path="/"
-            element={<Home />}
-          />
 
-          <Route
-            path="/services"
-            element={<Services />}
-          />
+        <Suspense
+          fallback={
+            <PageLoader />
+          }
+        >
+          <Routes>
 
-          <Route
-            path="/industries"
-            element={<Industries />}
-          />
+            {/* HOME */}
 
-          <Route
-            path="/about"
-            element={<About />}
-          />
+            <Route
+              path="/"
+              element={
+                <Home />
+              }
+            />
 
-          <Route
-            path="/contact"
-            element={<Contact />}
-          />
+            {/* SERVICES */}
 
-          <Route
-            path="/privacy-policy"
-            element={<Privacy />}
-          />
+            <Route
+              path="/services"
+              element={
+                <Services />
+              }
+            />
 
-          <Route
-            path="/terms-of-service"
-            element={<Terms />}
-          />
+            {/* INDUSTRIES */}
 
-          <Route
-            path="*"
-            element={<NotFound />}
-          />
-        </Routes>
+            <Route
+              path="/industries"
+              element={
+                <Industries />
+              }
+            />
+
+            {/* ABOUT */}
+
+            <Route
+              path="/about"
+              element={
+                <About />
+              }
+            />
+
+            {/* CONTACT */}
+
+            <Route
+              path="/contact"
+              element={
+                <Contact />
+              }
+            />
+
+            {/* PRIVACY */}
+
+            <Route
+              path="/privacy-policy"
+              element={
+                <Privacy />
+              }
+            />
+
+            <Route
+              path="/privacy"
+              element={
+                <Navigate
+                  to="/privacy-policy"
+                  replace
+                />
+              }
+            />
+
+            {/* TERMS */}
+
+            <Route
+              path="/terms-of-service"
+              element={
+                <Terms />
+              }
+            />
+
+            <Route
+              path="/terms"
+              element={
+                <Navigate
+                  to="/terms-of-service"
+                  replace
+                />
+              }
+            />
+
+            {/* NOT FOUND */}
+
+            <Route
+              path="*"
+              element={
+                <NotFound />
+              }
+            />
+
+          </Routes>
+        </Suspense>
+
       </main>
+
+      {/* FOOTER */}
 
       <Footer />
 
+      {/* GLOBAL CONTROLS */}
+
       <ScrollToTop />
 
-      <WhatsAppButton />
+      <RRChatAssistant />
+
     </div>
   );
 }
