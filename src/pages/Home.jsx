@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 
 import ContactCTA from "../components/ContactCTA";
 import SiteIcon from "../components/SiteIcon";
+import MovingPortfolio from "../components/MovingPortfolio";
 
 import {
   advantages,
@@ -424,14 +425,7 @@ function Home() {
             </p>
           </div>
 
-          <div className="rr-project-grid">
-            {portfolioProjects.map((project) => (
-              <ProjectCard
-                key={project.id}
-                project={project}
-              />
-            ))}
-          </div>
+         <MovingPortfolio />
         </div>
       </section>
 
